@@ -5,12 +5,12 @@
 {{#post}}   
 
   {{#has tag="blog"}}
-    <h1>The Blog</h1>
+    {{> blog-post}}
   {{/has}}
 
 
-  {{#has tag="portifolio"}}
-    <h1>The Portifolio</h1>
+  {{#has tag="portfolio"}}
+    {{> portfolio-post}}
   {{/has}}
 
 {{/post}}

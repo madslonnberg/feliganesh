@@ -8,11 +8,10 @@ var app = angular.module("app", ['ngRoute']).
       when("/", { 
           template: "<div></div>",
           controller: function(){
-              console.log('hello');
-              window.location.replace('/portifolio')
+              window.location.replace('/portfolio')
           } 
         }).
-      otherwise( { redirectTo: "/portifolio" });
+      otherwise( { redirectTo: "/portfolio" });
 })
 
    .controller('hello',function(){

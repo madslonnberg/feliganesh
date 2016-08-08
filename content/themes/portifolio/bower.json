@@ -1,0 +1,22 @@
+{
+  "name": "feliganesh",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Hellon Canella <helloncanella@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/madslonnberg/ganesh",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/vendors",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~3.0.0"
+  }
+}

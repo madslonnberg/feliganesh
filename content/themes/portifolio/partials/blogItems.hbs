@@ -1,0 +1,10 @@
+{{#get "posts" limit=maxItems as |recents|}}
+    <div class="blog-items">
+        {{#foreach recents}}
+        <div class="item">
+        <div class="image" style="background:url('{{image}}') no-repeat center center; background-size:cover"></div>
+        <h5 class="title">{{title}}</h5>
+        </div>
+        {{/foreach}}
+    </div>
+{{/get}}

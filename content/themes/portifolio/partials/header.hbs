@@ -1,0 +1,105 @@
+<header>
+
+  <nav class="grid">
+   
+     <div class="show-for-768-up">
+       <div class="menu">
+         {{navigation}}
+       </div>
+      </div> 
+
+
+    <div class="hide-for-768-up">
+          <div class="wrapper"></div> 
+    <!--<div class="ganesh grid"><img src="{{asset 'images/ganesh.png'}}" alt=""></div>    -->
+    <div class="menu">
+      <div class="menu-header">
+        <p class="title">{{title}}</p>
+        <div class="caret fa fa-caret-up "></div>
+      </div>
+      <div class="menu-options">
+        {{navigation}}
+      </div>    
+            
+    </div>
+    </div>
+
+  
+    
+
+  </nav>
+
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      var navHeight;
+      var opened;
+      var menuOptionsHeight;
+
+      function configNavigation(){
+
+        navHeight = $('nav').outerHeight();
+        opened = false;
+        menuOptionsHeight = $('.menu-options').height();
+
+        $('.wrapper').css({
+          'height':navHeight+'px',            
+        });
+
+         $('.caret , .menu-options').css({
+          'transition':'500ms'            
+        });
+   
+       
+         closeMenu(); 
+
+      }
+
+      configNavigation();
+
+      $(window).on('resize', function(){
+        configNavigation();  
+      });
+
+
+      function closeMenu(){
+        opened = false;
+        $('.menu-options').css('top', -1*menuOptionsHeight+'px');
+        $('.caret').css('transform','rotate(180deg)');
+      }
+      function openMenu(){
+        opened = true;
+
+        var navBottom = $('nav').position().top+navHeight;
+
+        $('.menu-options').css('top', navBottom+'px');
+         
+        $('.caret').css('transform','rotate(0deg)');
+        
+      }
+
+
+      $(window).on('click', function() {
+        closeMenu(); 
+      });
+
+      $('.menu-header').on('click', function(event) {
+        event.stopPropagation();
+        if(opened){
+          return closeMenu();
+        }
+        
+        openMenu()
+                
+      });
+
+
+
+      $('.menu-options li').click(function(event) {
+        event.stopPropagation();
+      })
+    });
+
+  </script>
+
+</header>

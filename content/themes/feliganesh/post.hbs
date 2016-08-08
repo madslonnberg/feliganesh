@@ -2,15 +2,16 @@
 <html>
 {{> head}}
 
-{{#post}}   
+{{#post}}  
 
+   <!--Filtering content-->
   {{#has tag="blog"}}
-    {{> blog-post}}
+    {{> blog-post title=this.title content=this.content image=this.image}}
   {{/has}}
 
 
   {{#has tag="portfolio"}}
-    {{> portfolio-post}}
+    {{> portfolio-post title=this.title content=this.content image=this.image}}
   {{/has}}
 
 {{/post}}

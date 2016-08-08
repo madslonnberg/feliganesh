@@ -1,0 +1,11 @@
+<!--This template is used inside portifolio's pages in order to get the blog's content-->
+{{#get "posts" limit=maxItems filter="tags:[blog]" as |recents| }}
+    <div class="blog-items">
+        {{#foreach recents}}
+            <div class="item">
+                <div class="image" style="background:url('{{image}}') no-repeat center center; background-size:cover"></div>
+                <h5 class="title">{{title}}</h5>
+            </div>
+        {{/foreach}}
+    </div>
+{{/get}}

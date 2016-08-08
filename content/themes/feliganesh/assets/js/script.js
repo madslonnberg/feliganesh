@@ -14,14 +14,6 @@ var app = angular.module("app", ['ngRoute']).
       otherwise( { redirectTo: "/portfolio" });
 })
 
-   .controller('hello',function(){
-       console.log('hello')
-   }) 
-
-
-console.log(app)
-// angular.module('app',[]);
-
 
 
 ;

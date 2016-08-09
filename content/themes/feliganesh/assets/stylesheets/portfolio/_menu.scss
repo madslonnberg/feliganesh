@@ -1,0 +1,80 @@
+body#portfolio{
+
+    .wrapper{
+        width: 100vw;
+        position:absolute;
+        background: $background;
+        left: 0;
+        z-index: 2;
+    }
+
+    .menu {
+        color: $c1;
+        position: relative;
+
+
+        * {
+            font-size: 1.4rem;
+            margin: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+
+            // @media screen and (min-width:1024px) {
+            //    font-size: 1.4rem;  
+            // }
+        
+        }
+        .menu-header {
+            font-weight: 700;    
+            position: relative;
+            display: flex;
+            align-items: center;
+            text-transform: lowercase;
+            z-index: 3;
+            &>*:first-child {
+                padding-right: 0.8rem;
+            }
+
+            .fa {
+                position: relative;
+                top: 2px;
+                font-size: 1.2rem;
+            }
+
+                
+
+        }
+        .menu-options {
+    
+            opacity: 0.95;
+            right: 0;
+            position: absolute;
+            background-color: white;
+            text-align: right;
+            width: 180%;
+            padding-top: 0rem;
+            border-bottom-right-radius: 0.3rem;
+            border-bottom-left-radius: 0.3rem;
+            z-index:1;
+            margin-right: -.5rem;        
+            li {
+                padding-top: 0.1rem;
+                padding-bottom: 0.1rem;
+                padding-right: .5rem;
+                border-bottom: 1px solid $menu-alpha;
+                &:last-child {
+                    padding-bottom: 0.5rem;
+                }
+            }
+        
+        }
+        ul.grid {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+
+}
+
+

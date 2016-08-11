@@ -16,11 +16,15 @@ gulp.task('serve', ['sass'], function() {
     gulp.watch(["**/*.scss"], ['sass']);
 });
 
+
+
+
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
     return gulp.src("content/themes/"+folderThemeName+"/assets/stylesheets/bundle.scss")
         .pipe($.sassGlob())
         .pipe($.sass())
+        .on('error', $.util.log)
         .pipe($.autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false

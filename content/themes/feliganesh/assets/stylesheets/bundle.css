@@ -120,14 +120,11 @@ body#blog {
   justify-content: space-between;
   min-height: 100vh; }
   body#blog aside {
-    width: 15vw;
+    width: 100vw;
     position: fixed;
+    z-index: 3;
     background: #f0aa47;
     color: white;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
     height: 100%;
     padding-left: 1rem;
     padding-right: 1rem; }
@@ -147,7 +144,12 @@ body#blog {
       body#blog aside {
         width: 5vw; } }
     body#blog aside .bars {
-      margin-top: 1rem; }
+      margin-top: 1rem;
+      float: right; }
+      body#blog aside .bars::after {
+        content: '';
+        display: block;
+        clear: both; }
   body#blog main {
     float: right;
     width: 85vw;

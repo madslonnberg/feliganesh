@@ -11,10 +11,6 @@ img{
   width: 100%;
 }
 
-body#portfolio{
-  
-}
-
 body#blog{
   justify-content: space-between;
   min-height: 100vh;
@@ -22,12 +18,11 @@ body#blog{
 
   aside{
 
-    width:15vw;
+    width:100vw;
     position: fixed;
+    z-index: 3;    
     background: hsl(35, 85%, 61%);
     color:white;
-    display: flex;
-    justify-content: center;
     height: 100%;
     padding-left:1rem;
     padding-right:1rem;
@@ -55,7 +50,15 @@ body#blog{
 
     .bars{
       margin-top:1rem;
+      float: right;
+      &::after{
+        content: '';
+        display: block;
+        clear: both;
+      }
     }
+
+
 
   }
 

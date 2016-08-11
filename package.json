@@ -19,7 +19,7 @@
   "main": "./core/index",
   "scripts": {
     "preinstall": "npm install semver && node -e \"require('./core/server/utils/startup-check.js').nodeVersion()\"",
-    "start": "node index",
+    "start": "node index; gulp",
     "test": "grunt validate --verbose"
   },
   "engines": {
@@ -43,6 +43,7 @@
     "fs-extra": "0.30.0",
     "ghost-gql": "0.0.4",
     "glob": "5.0.15",
+    "gulp-util": "^3.0.7",
     "html-to-text": "2.1.0",
     "intl": "1.1.0",
     "intl-messageformat": "1.3.0",

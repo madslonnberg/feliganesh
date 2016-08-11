@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Dosis);
+@import 'https://fonts.googleapis.com/css?family=Dosis:400,500,600';
 html {
   font-size: 1rem; }
 
@@ -9,7 +9,7 @@ body#blog {
   line-height: 1.618;
   color: #333; }
   body#blog * {
-    font-weight: 400 !important; }
+    font-weight: 400; }
   body#blog p {
     margin-bottom: 1.3rem;
     line-height: 1.618;
@@ -123,11 +123,56 @@ body#blog {
     width: 100vw;
     position: fixed;
     z-index: 3;
-    background: #f0aa47;
-    color: white;
+    background: #f5f2ef;
+    color: #443631;
     height: 100%;
     padding-left: 1rem;
     padding-right: 1rem; }
+    body#blog aside header {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 38vh;
+      z-index: -1; }
+      body#blog aside header svg {
+        height: 100%;
+        width: 100%; }
+        body#blog aside header svg polygon {
+          fill: #f0aa47; }
+    body#blog aside .profile {
+      position: relative;
+      top: 7vh; }
+      body#blog aside .profile h1 {
+        margin: 0.6rem 0; }
+      body#blog aside .profile .images {
+        width: 25vh;
+        height: 25vh;
+        border-radius: 50%;
+        margin: auto; }
+      body#blog aside .profile .name {
+        text-align: center;
+        font-weight: 500; }
+      body#blog aside .profile .bio {
+        margin-bottom: 1rem; }
+      body#blog aside .profile .icons {
+        font-size: 1.5rem; }
+        body#blog aside .profile .icons * {
+          float: right;
+          margin-left: 0.7rem; }
+        body#blog aside .profile .icons::after {
+          content: '';
+          display: block;
+          clear: both; }
+    body#blog aside .bars {
+      margin-top: 1rem;
+      color: white; }
+      body#blog aside .bars .fa {
+        float: right; }
+      body#blog aside .bars::after {
+        content: '';
+        display: block;
+        clear: both; }
     @media (min-width: 425px) {
       body#blog aside {
         width: 12vw; } }
@@ -143,13 +188,6 @@ body#blog {
     @media (min-width: 1024px) {
       body#blog aside {
         width: 5vw; } }
-    body#blog aside .bars {
-      margin-top: 1rem;
-      float: right; }
-      body#blog aside .bars::after {
-        content: '';
-        display: block;
-        clear: both; }
   body#blog main {
     float: right;
     width: 85vw;

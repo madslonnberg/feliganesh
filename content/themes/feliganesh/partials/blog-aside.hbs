@@ -1,3 +1,5 @@
+<!--Useful when menu is open-->
+<div class="menu-layer"></div>
 <aside>
   <header>
     <svg viewBox="0 0 1177.8 488.9" preserveAspectRatio="none">
@@ -32,7 +34,7 @@
 
     var $navIcon = $('#nav-icon');
 
-    $('aside, #nav-icon').css('transition','500ms ease-in-out');
+    $('.menu-layer, aside, .profile, #nav-icon').css('transition','500ms ease-in-out');
 
     $('#nav-icon').click(function(){
       switchOpeness();
@@ -75,7 +77,7 @@
 
     function openMenu(){      
       $('aside').css('left',0+'px');
-      $(this).add('#nav-icon, .profile, aside').addClass('open');
+      $(this).add('#nav-icon, .profile, aside, .menu-layer').addClass('open');
       opened = true;
     }
 
@@ -84,7 +86,7 @@
       var asideWidth = $('aside').outerWidth();
 
       $('aside').css('left',(mainLeft-asideWidth)+'px');
-      $('#nav-icon, .profile, aside').removeClass('open');
+      $('#nav-icon, .profile, aside, .menu-layer').removeClass('open');
       opened = false;
     }
 

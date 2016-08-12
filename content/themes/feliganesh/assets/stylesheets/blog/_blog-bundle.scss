@@ -17,6 +17,19 @@ body#blog{
   min-height: 100vh;
   // background: url('../images/pattern.png');
 
+
+  .menu-layer{
+    // z-index: -1;
+    &.open{
+      z-index: 2;
+      width: 100vw;
+      height: 100vh;
+      background: #443631;
+      position: fixed;
+      opacity: 0.4; 
+    }
+  }
+
   aside{
 
     width:100%;
@@ -119,33 +132,6 @@ body#blog{
       
     }
 
-    
-
-    
-
-    // @media(min-width: 425px){
-    //   width: 12vw;
-    // }
-
-    // @media(min-width: 550px){
-    //   width: 10vw;
-    // }
-
-    // @media(min-width: 650px){
-    //   width: 8vw;
-    // }
-
-    // @media(min-width: 880px){
-    //   width: 7vw;
-    // }
-
-    // @media(min-width: 1024px){
-    //   width: 5vw;
-    // }
-
-    
-
-
   }
 
   main{
@@ -153,6 +139,7 @@ body#blog{
     width:85vw;
     background: hsl(37, 38%, 91%);
     min-height: 100vh;
+    z-index: 1;
 
     .bar{
       padding:3px;

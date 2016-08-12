@@ -114,7 +114,6 @@ body#blog #nav-icon {
   height: 45px;
   position: relative;
   transform: rotate(0deg);
-  transition: .5s ease-in-out;
   cursor: pointer; }
 
 body#blog #nav-icon span {
@@ -174,6 +173,13 @@ body#blog {
   -ms-flex-pack: justify;
   justify-content: space-between;
   min-height: 100vh; }
+  body#blog .menu-layer.open {
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    background: #443631;
+    position: fixed;
+    opacity: 0.4; }
   body#blog aside {
     width: 100%;
     max-width: 320px;
@@ -237,7 +243,8 @@ body#blog {
     float: right;
     width: 85vw;
     background: #f1eadf;
-    min-height: 100vh; }
+    min-height: 100vh;
+    z-index: 1; }
     body#blog main .bar {
       padding: 3px;
       background: rgba(53, 42, 39, 0);

@@ -2,6 +2,7 @@
 @import 'typography';
 @import './grid/grid.scss';
 @import 'post';
+@import 'animated-hamburger';
 
 *{
   box-sizing:border-box;
@@ -18,15 +19,26 @@ body#blog{
 
   aside{
 
-    width:100vw;
+    width:100%;
+    max-width: 320px;
     position: fixed;
     z-index: 3;    
-    // background: hsl(35, 85%, 61%);
-    background: #f5f2ef; 
+    background: hsl(35, 85%, 61%);
+    
     color:#443631;
     height: 100%;
     padding-left:1rem;
     padding-right:1rem;
+
+    &::after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    &.open{
+      background: #f5f2ef; 
+    }
 
 
     header{
@@ -49,7 +61,13 @@ body#blog{
     .profile{
 
       position: relative;
-      top: 7vh;
+      top: 17vh;
+
+      opacity: 0;
+
+      &.open{
+        opacity: 1;
+      }
 
       h1{
         margin: 0.6rem 0;
@@ -91,45 +109,39 @@ body#blog{
     }
 
 
-    .bars{
+    #nav-icon{
       margin-top:1rem;
       color: white;
+      position: absolute;
 
+     
 
-      .fa{
-        float: right;        
-      }
-
-      &::after{
-          content: '';
-          display: block;
-          clear: both;
-        }
+      
     }
 
     
 
     
 
-    @media(min-width: 425px){
-      width: 12vw;
-    }
+    // @media(min-width: 425px){
+    //   width: 12vw;
+    // }
 
-    @media(min-width: 550px){
-      width: 10vw;
-    }
+    // @media(min-width: 550px){
+    //   width: 10vw;
+    // }
 
-    @media(min-width: 650px){
-      width: 8vw;
-    }
+    // @media(min-width: 650px){
+    //   width: 8vw;
+    // }
 
-    @media(min-width: 880px){
-      width: 7vw;
-    }
+    // @media(min-width: 880px){
+    //   width: 7vw;
+    // }
 
-    @media(min-width: 1024px){
-      width: 5vw;
-    }
+    // @media(min-width: 1024px){
+    //   width: 5vw;
+    // }
 
     
 

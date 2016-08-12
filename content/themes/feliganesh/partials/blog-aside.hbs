@@ -5,9 +5,14 @@
     </svg>
   </header>
 
-  <div class="bars">
-    <div class="fa fa-bars fa-3x"></div>
+  <!--Animated Hambuger-->
+  <div id="nav-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
+  
   <div class="profile">
 
     <div class="images" style="background-image: url({{asset "images/mads.jpg"}}); background-size: cover"></div>
@@ -21,3 +26,71 @@
     </div>
   </div>  
 </aside>
+
+<script>
+  $(document).ready(function(){
+
+    var $navIcon = $('#nav-icon');
+
+    $('aside, #nav-icon').css('transition','500ms ease-in-out');
+
+    $('#nav-icon').click(function(){
+      switchOpeness();
+      centerIcon();
+    });
+
+
+    closeMenu();
+    centerIcon();
+
+    $(window).resize(function(){
+       closeMenu();
+       centerIcon();
+    })
+
+
+    function centerIcon(){
+      var mainLeft = $('main').position().left;
+      var iconWidth = $('#nav-icon').width();
+
+      var right = (mainLeft - iconWidth)/2;
+
+      console.log(right, mainLeft, iconWidth)
+
+
+      $('#nav-icon').css({
+        'right': right+'px',
+      })
+
+    }
+
+    function switchOpeness(){
+      if(opened){
+        closeMenu()
+      }else{
+        openMenu();
+      }
+    }
+
+
+    function openMenu(){      
+      $('aside').css('left',0+'px');
+      $(this).add('#nav-icon, .profile, aside').addClass('open');
+      opened = true;
+    }
+
+    function closeMenu(){
+      var mainLeft = $('main').position().left;
+      var asideWidth = $('aside').outerWidth();
+
+      $('aside').css('left',(mainLeft-asideWidth)+'px');
+      $('#nav-icon, .profile, aside').removeClass('open');
+      opened = false;
+    }
+
+
+    
+
+
+  });
+</script>

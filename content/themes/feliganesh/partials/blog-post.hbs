@@ -1,8 +1,7 @@
 <body id="blog">
 {{> blog-aside}} 
 
-  <main id="post">
-      
+  <main id="post"> 
     
 
     <div class="grid content">
@@ -12,14 +11,12 @@
         <div class="content">
           <h1 class="title">{{title}}</h1>
           <h5 class="date">{{date published_at format=" DD/MMM/YYYY"}}</h5>
+
           <div class="text">
             {{content}}            
           </div>
 
         </div>
-  
-
-        
 
       </div>
       <div class="footer">
@@ -27,8 +24,9 @@
         </div>
         <div class="author-details">
           <div class="content">
-            <h4 class="name">{{author}}</h4>
-            <p class="small description hide-for-700-up">{{author.bio words="15"}}</p>
+            <h4 class="name">{{author}}</h4>            
+            <p class="small description hide-for-420-up" data-word="30">{{author.bio}}</p>
+            <p class="small description show-for-420-up hide-for-700-up" data-word="100">{{author.bio}}</p>
             <p class="description show-for-700-up">{{author.bio}}</p>
             <div class="more small"><a href="">more</a> </div>
           </div>
@@ -41,5 +39,65 @@
     </div>
 
   </main>
+
+
+  <div class="metadata" style="display: none">
+    <div class="post-id">{{id}}</div>
+    <div class="post-title">{{title}}</div>
+  </div>
   
 </body>
+
+<script>
+  $(document).ready(function(){
+
+    limitWords();
+   
+    function limitWords(){
+      var selector = $("[data-word]");
+
+      selector.each(function(index, element){
+
+        var $element = $(element);  
+        var limit = Number($element.data('word'))
+        var newText = $element.text().substring(0, limit) + '...' ;
+
+        $element.text(newText);
+      });
+
+    }
+
+
+  })
+</script>
+
+<!--<div id="disqus_thread"></div>-->
+<script>
+
+/**
+ *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+ *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables 
+**/
+
+
+$(document).ready(function(){
+  
+  var disqus_config = function () {
+    this.page.identifier = $('.metadata .post-id').text(); // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+
+
+  //console.log(disqus_config.page.identifier);
+
+  (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//feliganesh.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+
+})
+
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>

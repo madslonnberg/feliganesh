@@ -1,4 +1,6 @@
+@charset "UTF-8";
 @import 'https://fonts.googleapis.com/css?family=Dosis:400,500,600';
+@import 'https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope';
 html {
   font-size: 1rem; }
 
@@ -7,40 +9,62 @@ body#blog {
   font-family: 'Dosis';
   font-weight: 400;
   line-height: 1.618;
-  color: #333; }
-  body#blog * {
-    font-weight: 400; }
+  color: #443631 !important; }
+  body#blog blockquote {
+    font-family: 'Annie Use Your Telescope', cursive; }
+    body#blog blockquote p {
+      font-size: 1.3rem; }
+      @media (min-width: 714px) {
+        body#blog blockquote p {
+          font-size: 2.4rem !important; } }
+  body#blog a:visited, body#blog a {
+    color: inherit;
+    font-weight: 700; }
+  body#blog h1, body#blog h2, body#blog h3, body#blog h4, body#blog h5, body#blog h6 {
+    font-weight: 500;
+    margin-bottom: 0;
+    line-height: 1.4; }
   body#blog p {
     margin-bottom: 1.3rem;
     line-height: 1.618;
     font-size: 1rem; }
-    @media (min-width: 714px) {
-      body#blog p {
-        font-size: 1.1rem; } }
+  @media (min-width: 714px) {
+    body#blog p, body#blog ul, body#blog ol {
+      font-size: 1.3rem; } }
   body#blog h1 {
     font-size: 2rem; }
     @media (min-width: 583px) {
       body#blog h1 {
-        font-size: 2.1rem; } }
+        font-size: 2.2rem; } }
     @media (min-width: 700px) {
       body#blog h1 {
-        font-size: 2.3rem; } }
+        font-size: 2.4rem; } }
+  body#blog h2 {
+    font-size: 1.7rem; }
   body#blog h3 {
-    font-size: 1.563em;
+    font-size: 1.563rem;
     margin: 0; }
   body#blog h4 {
-    font-size: 1.25em; }
+    font-size: 1.25rem; }
   @media (min-width: 700px) {
     body#blog h5 {
-      font-size: 0.9em; } }
+      font-size: 0.9rem; } }
   body#blog .small,
   body#blog .font_small {
-    font-size: 0.9em; }
+    font-size: 0.9rem; }
 
 body#blog .grid {
   max-width: 90rem;
   margin: 0 auto;
   padding: 5%; }
+
+@media (min-width: 420px) {
+  body#blog .hide-for-420-up {
+    display: none; } }
+
+@media (max-width: 420px) {
+  body#blog .show-for-420-up {
+    display: none; } }
 
 @media (min-width: 700px) {
   body#blog .hide-for-700-up {
@@ -81,7 +105,8 @@ body#blog #post .footer {
   body#blog #post .footer .img {
     width: 33.33333%;
     background: url("/assets/images/mads.jpg?v=db6a06c2e8") 0 0 no-repeat;
-    background-size: cover; }
+    background-size: cover;
+    background-position: center; }
   body#blog #post .footer .author-details {
     width: 66.66667%;
     padding: 2.5% 5%;
@@ -92,7 +117,8 @@ body#blog #post .footer {
       body#blog #post .footer .author-details {
         padding: 6% 5%; } }
     body#blog #post .footer .author-details .content .name, body#blog #post .footer .author-details .content .description {
-      margin: 0; }
+      margin: 0;
+      margin-bottom: 0.5rem; }
     body#blog #post .footer .author-details .content .name {
       color: #443631; }
       @media (min-width: 700px) {
@@ -107,7 +133,7 @@ body#blog #post .footer {
         body#blog #post .footer .author-details .content .description {
           font-size: 1rem; } }
     body#blog #post .footer .author-details .content .more a {
-      color: black; }
+      color: inherit; }
 
 body#blog #nav-icon {
   width: 48px;
@@ -293,6 +319,7 @@ body#blog {
     body#blog .text .title, body#blog .text .author {
       color: #443631; }
     body#blog .text p {
+      font-size: 1.2rem;
       margin-top: 0.5rem;
       margin-bottom: 0.5rem; }
 
@@ -679,3 +706,13 @@ body#portfolio footer {
 
 .masonry .gutter {
   width: 1%; }
+
+blockquote {
+  quotes: "“" "”" "‘" "’";
+  text-align: center; }
+
+blockquote p:before {
+  content: open-quote; }
+
+blockquote p:after {
+  content: close-quote; }

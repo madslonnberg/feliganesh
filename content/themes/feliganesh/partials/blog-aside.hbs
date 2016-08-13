@@ -17,15 +17,22 @@
   
   <div class="profile">
 
-    <div class="images" style="background-image: url({{asset "images/mads.jpg"}}); background-size: cover"></div>
+    <!--Get author information-->
+    {{#get "users" filter="slug:owner"}}
+      {{#foreach users}}
+        <div class="images" style="background-image: url('{{image}}'); background-size: cover"></div>
 
-    <h1 class="name">Mads Lønnberg</h1>
-    <div class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-    <div class="icons">
-      <div class="fa fa-linkedin "></div>
-      <div class="fa fa-facebook "></div>
-      <div class="fa fa-twitter"></div>
-    </div>
+        <h1 class="name">{{name}}</h1>
+        <div class="bio">{{bio}}</div>
+        <div class="icons">
+          <div class="fa fa-linkedin"></div>
+          <div class="fa fa-facebook "></div>
+          <div class="fa fa-twitter"></div>
+        </div>     
+      {{/foreach}}
+    {{/get}}
+
+    
   </div>  
 </aside>
 

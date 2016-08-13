@@ -141,6 +141,13 @@ body#blog{
     min-height: 100vh;
     z-index: 1;
 
+    .masonry{
+      a{
+        font-weight: inherit;
+        text-decoration:none;
+      }
+    }
+
     .bar{
       padding:3px;
       background: hsla(14, 15%, 18%,0);

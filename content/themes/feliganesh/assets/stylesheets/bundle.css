@@ -104,7 +104,6 @@ body#blog #post .footer {
   display: flex; }
   body#blog #post .footer .img {
     width: 33.33333%;
-    background: url("/assets/images/mads.jpg?v=db6a06c2e8") 0 0 no-repeat;
     background-size: cover;
     background-position: center; }
   body#blog #post .footer .author-details {
@@ -271,6 +270,9 @@ body#blog {
     background: #f1eadf;
     min-height: 100vh;
     z-index: 1; }
+    body#blog main .masonry a {
+      font-weight: inherit;
+      text-decoration: none; }
     body#blog main .bar {
       padding: 3px;
       background: rgba(53, 42, 39, 0);

@@ -10,9 +10,8 @@
                     <div class="sizer"></div>
                     <div class="gutter"></div>
     
-                    {{#get "posts" filter="tags:[blog]" include="author" as |recents| }}
-                        {{#foreach recents}}
-                            
+                    {{#get "posts" filter="tags:[blog]" include="author" }}
+                        {{#foreach posts}}                            
                             <div class="item {{#if featured}}big{{/if}}" >
                                 <a href="{{url}}">
                                     <img src="{{image}}" >
@@ -34,10 +33,7 @@
                                 </a>
                             </div>
                         {{/foreach}}            
-                    {{/get}}  
-
-
-                    
+                    {{/get}}                    
                 </div>
             </div>
         </main> 

@@ -12,6 +12,10 @@ img{
   width: 100%;
 }
 
+a{
+    color: inherit;
+}
+
 body#blog{
   justify-content: space-between;
   min-height: 100vh;
@@ -53,6 +57,8 @@ body#blog{
       background: #f5f2ef; 
     }
 
+    
+
 
     header{
       position: absolute;
@@ -89,8 +95,9 @@ body#blog{
       .images{
         width: 25vh;
         height: 25vh;
-        border-radius: 50%;
+        border-radius: 15%;
         margin: auto;
+        border: 5px solid #f5f2ef;
       }
 
       .name{
@@ -139,13 +146,26 @@ body#blog{
     width:85vw;
     background: hsl(37, 38%, 91%);
     min-height: 100vh;
-    z-index: 1;
+    z-index: 1;  
 
-    .masonry{
-      a{
-        font-weight: inherit;
-        text-decoration:none;
-      }
+    @media(min-width: 425px){
+      width: 88vw;
+    }
+
+    @media(min-width: 550px){
+      width: 90vw;
+    }
+
+    @media(min-width: 650px){
+      width: 92vw;
+    }
+
+    @media(min-width: 880px){
+      width: 93vw;
+    }
+
+    @media(min-width: 1024px){
+      width: 95vw;
     }
 
     .bar{
@@ -188,44 +208,35 @@ body#blog{
         }
       }
     }
-
-    @media(min-width: 425px){
-      width: 88vw;
-    }
-
-    @media(min-width: 550px){
-      width: 90vw;
-    }
-
-    @media(min-width: 650px){
-      width: 92vw;
-    }
-
-    @media(min-width: 880px){
-      width: 93vw;
-    }
-
-    @media(min-width: 1024px){
-      width: 95vw;
-    }
   }
 
   .item, img{
-    border-radius: 11px 11px 0px 0px;
-    background: #f5f2ef;
+     border-radius: 11px 11px 0px 0px;
+     background: #f5f2ef;
   }
 
-  .item{
-    margin-bottom: 40px;
-  }
-
-  .text{
-    padding:6%;
-    padding-top: 3%;
-
-    .title, .author{
-      color:hsl(16, 16%, 23%);
+  .masonry{
+    a{
+      font-weight: inherit;
+      text-decoration:none;
     }
+
+    
+
+    .item{
+      margin-bottom: 40px;
+    }
+
+    .text{
+      padding:6%;
+      padding-top: 3%;
+
+      .title, .author{
+        color:hsl(16, 16%, 23%);
+      }
+    }
+
+ 
 
     p{
       font-size: 1.2rem;
@@ -234,7 +245,17 @@ body#blog{
     }
   }
 
+
+  .post, .author{
+    .grid{
+      max-width: 62.1rem;
+    }
+  }
+
+
 }
+
+
 
 
 

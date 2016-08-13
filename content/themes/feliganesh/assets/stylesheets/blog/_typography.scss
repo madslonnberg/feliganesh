@@ -3,14 +3,12 @@ html {
 }
 
 body#blog {
-    background-color: white;
-    font-family: 'Dosis';
-    font-weight: 400;
-    line-height: 1.618;
-    color: #443631 !important;
 
-    
-
+  background-color: white;
+  font-family: 'Dosis';
+  font-weight: 400;
+  line-height: 1.618;
+  color: #443631 !important;
 
   blockquote{
     font-family: 'Annie Use Your Telescope', cursive;
@@ -21,9 +19,9 @@ body#blog {
       @media(min-width: 714px){
         font-size: 2.4rem !important ; 
       }
+
     }
 
-    
   }  
 
   a{

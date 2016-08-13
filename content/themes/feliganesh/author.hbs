@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  {{> head}}
+  <body id="blog">
+      {{>blog-aside}}
+      <main id="author">
+          <div class="grid wrapper">
+            {{#author}}
+                <img src="{{cover}}" alt="">
+            {{/author}}       
+          </div>
+      </main>
+  </body>
+</html>

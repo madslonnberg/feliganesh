@@ -6,7 +6,7 @@
 
   <!--Filtering content-->
   {{#has tag="blog"}}
-    {{> blog-post id=this.id title=this.title content=this.content image=this.image published_at=this.published_at author=this.author}}
+    {{> blog-post id=this.id title=this.title content=this.content image=this.image published_at=this.published_at author=this.author author_url=this.author.url}}
   {{/has}}
 
 

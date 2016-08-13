@@ -1,7 +1,7 @@
 <body id="blog">
 {{> blog-aside}} 
 
-  <main class="post"> 
+  <main id="post"> 
     
 
     <div class="grid content">
@@ -19,17 +19,18 @@
 
       </div>
       <div class="footer">
-        <div class="img" style="background-image: url('{{author.image}}');">
-        </div>
-        <div class="author-details">
-          <div class="content">
-            <h4 class="name">{{author}}</h4>            
-            <p class="small description hide-for-420-up" data-word="30">{{author.bio}}</p>
-            <p class="small description show-for-420-up hide-for-700-up" data-word="100">{{author.bio}}</p>
-            <p class="description show-for-700-up">{{author.bio}}</p>
-            <div class="more small"><a href="">more</a> </div>
+        {{#author}}
+          <div class="img" style="background-image: url('{{image}}');"></div>
+          <div class="author-details">
+            <div class="content">
+                <h4 class="name"><a href="{{url}}">{{name}}</a></h4>            
+                <p class="small description hide-for-420-up" data-word="30">{{bio}}</p>
+                <p class="small description show-for-420-up hide-for-700-up" data-word="100">{{bio}}</p>
+                <p class="description show-for-700-up">{{bio}}</p>
+                <div class="more small"><a href="{{url}}">more </div>
+            </div>
           </div>
-        </div>
+        {{/author}}
       </div>
       <div id="disqus_thread">
         <a href=""></a>

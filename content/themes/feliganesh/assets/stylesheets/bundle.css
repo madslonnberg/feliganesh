@@ -74,61 +74,61 @@ body#blog .grid {
   body#blog .show-for-700-up {
     display: none; } }
 
-body#blog .post #disqus_thread {
+body#blog #post #disqus_thread {
   background: #f5f2ef;
   padding: 6%; }
-  body#blog .post #disqus_thread a {
+  body#blog #post #disqus_thread a {
     color: #443631 !important; }
 
-body#blog .post .text {
+body#blog #post .text {
   padding: 0%;
   background: #f5f2ef; }
   @media (min-width: 700px) {
-    body#blog .post .text p {
+    body#blog #post .text p {
       font-size: 1.3rem; } }
-  body#blog .post .text .content {
+  body#blog #post .text .content {
     padding: 6%;
     padding-top: 0%; }
     @media (min-width: 700px) {
-      body#blog .post .text .content {
+      body#blog #post .text .content {
         padding-top: 4%; } }
 
-body#blog .post .title, body#blog .post .date {
+body#blog #post .title, body#blog #post .date {
   margin: 0; }
 
-body#blog .post .footer {
+body#blog #post .footer {
   display: -ms-flexbox;
   display: flex; }
-  body#blog .post .footer .img {
+  body#blog #post .footer .img {
     width: 33.33333%;
     background-size: cover;
     background-position: center; }
-  body#blog .post .footer .author-details {
+  body#blog #post .footer .author-details {
     width: 66.66667%;
     padding: 2.5% 5%;
     background: #e7e0d9;
     display: -ms-flexbox;
     display: flex; }
     @media (min-width: 714px) {
-      body#blog .post .footer .author-details {
+      body#blog #post .footer .author-details {
         padding: 6% 5%; } }
-    body#blog .post .footer .author-details .content .name, body#blog .post .footer .author-details .content .description {
+    body#blog #post .footer .author-details .content .name, body#blog #post .footer .author-details .content .description {
       margin: 0;
       margin-bottom: 0.5rem; }
-    body#blog .post .footer .author-details .content .name {
+    body#blog #post .footer .author-details .content .name {
       color: #443631; }
       @media (min-width: 700px) {
-        body#blog .post .footer .author-details .content .name {
+        body#blog #post .footer .author-details .content .name {
           font-size: 1.8rem; } }
-    body#blog .post .footer .author-details .content .description {
+    body#blog #post .footer .author-details .content .description {
       font-size: 0.8rem; }
       @media (min-width: 700px) {
-        body#blog .post .footer .author-details .content .description {
+        body#blog #post .footer .author-details .content .description {
           font-size: 1rem; } }
       @media (min-width: 583px) {
-        body#blog .post .footer .author-details .content .description {
+        body#blog #post .footer .author-details .content .description {
           font-size: 1rem; } }
-    body#blog .post .footer .author-details .content .more a {
+    body#blog #post .footer .author-details .content .more a {
       color: inherit; }
 
 body#blog #nav-icon {
@@ -325,7 +325,7 @@ body#blog {
     font-size: 1.2rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem; }
-  body#blog .post .grid, body#blog .author .grid {
+  body#blog #post .grid, body#blog #author .grid {
     max-width: 62.1rem; }
 
 body#portfolio .grid {

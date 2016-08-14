@@ -18,10 +18,9 @@ a{
 }
 
 body#blog{
-  justify-content: space-between;
+  
   min-height: 100vh;
-  // background: url('../images/pattern.png');
-
+  
 
   .menu-layer{
     // z-index: -1;
@@ -251,8 +250,54 @@ body#blog{
     }
   }
 
+  nav{
+    position: relative;
+    ul{
+      display: flex;
+      list-style: none;
+      padding:0;
+      
+      a{
+        text-decoration: none !important;
+        font-weight: 700 !important;
+      }
+    }
 
-  #post, #author{
+    &::after{
+      content:'';
+      clear: both;
+      display: block;
+    }
+  }
+
+ 
+  header {
+    nav{
+      // top:-1rem;
+      ul{
+        float:right;
+        li{
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  footer {
+    
+    nav{
+      // bottom:-1rem;
+      ul{
+        float:left;
+        li{
+          margin-right: 10px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  #post, #author, #authors-list{
     .grid{
       max-width: 62.1rem;
     }

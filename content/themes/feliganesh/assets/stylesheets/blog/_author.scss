@@ -1,18 +1,25 @@
 body#blog{
 
-    main#author{
+    main#author, main#authors-list{
 
-        .profile{
+        a{
+            text-decoration: none;
+            font-weight: initial;
+        }
+
+        .profile{            
+            background: hsl(37, 39%, 95%);     
             
-            background: hsl(37, 39%, 95%);
-        
-            
-            
+            a{
+                text-decoration: none;
+                font-weight: initial;
+            }
+
 
             .content{
                 position: relative;                
-                margin-top: -21vw;
-                
+                margin-top: -21vw;                
+
                 .image{       
                     $width: 30vw;
                    

@@ -24,8 +24,8 @@
           <div class="author-details">
             <div class="content">
                 <h4 class="name"><a href="{{url}}">{{name}}</a></h4>            
-                <p class="small description hide-for-420-up" data-word="30">{{bio}}</p>
-                <p class="small description show-for-420-up hide-for-700-up" data-word="100">{{bio}}</p>
+                <p class="small description hide-for-420-up" data-characters="30">{{bio}}</p>
+                <p class="small description show-for-420-up hide-for-700-up" data-characters="100">{{bio}}</p>
                 <p class="description show-for-700-up">{{bio}}</p>
                 <div class="more small"><a href="{{url}}">more </div>
             </div>
@@ -54,12 +54,12 @@
     limitWords();
    
     function limitWords(){
-      var selector = $("[data-word]");
+      var selector = $("[data-characters]");
 
       selector.each(function(index, element){
 
         var $element = $(element);  
-        var limit = Number($element.data('word'))
+        var limit = Number($element.data('characters'))
         var newText = $element.text().substring(0, limit) + '...' ;
 
         $element.text(newText);

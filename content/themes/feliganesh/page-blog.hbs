@@ -12,26 +12,7 @@
     
                     {{#get "posts" filter="tags:[blog]" include="author" }}
                         {{#foreach posts}}                            
-                            <div class="item {{#if featured}}big{{/if}}" >
-                                <a href="{{url}}">
-                                    <img src="{{image}}" >
-                                    <div class="text">
-                                        <h3 class="title">{{title}}</h3>
-                                        <span class="author small">by {{author.name}}</span>
-                                        <p class="content">
-                                            {{excerpt}}
-                                        </p>
-                                        <div class="bar">
-                                            <span class="heart">
-                                            3 <span class="fa fa-heart"></span>
-                                            </span>
-                                            <span class="comment">
-                                            10 <span class="fa fa-comment"></span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
+                            {{> "loop" posts=posts}}
                         {{/foreach}}            
                     {{/get}}                    
                 </div>

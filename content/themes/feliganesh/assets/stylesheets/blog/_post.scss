@@ -17,6 +17,7 @@ body#blog{
     .text{
       padding:0%;
       background: #f5f2ef;
+      border-radius: 11px 11px 0px 0px;
       p{
         @media(min-width: 700px){
           font-size: 1.3rem

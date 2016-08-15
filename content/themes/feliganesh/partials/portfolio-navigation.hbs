@@ -1,9 +1,0 @@
-<ul>
-  {{#foreach @blog.navigation}}
-      {{#unless current}}
-        <li>
-          <a href="{{url absolute=" true "}}">{{label}}</a>
-        </li>
-      {{/unless}}
-  {{/foreach}}
-</ul>

@@ -526,7 +526,7 @@ $(document).ready(function() {
         $('svg.head').click(function() {
 
             $('.image-layer').css('display', 'none');
-
+                      
             $('.piece').each(function(index) {
                 var delay = Math.sin(index * K);
 
@@ -545,6 +545,7 @@ $(document).ready(function() {
             $('.piece').eq(slowerPiece).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
                 $('.svg').removeClass('breath');
                 $(document).trigger('endHeadAnimation');
+
             });
         });        
     }

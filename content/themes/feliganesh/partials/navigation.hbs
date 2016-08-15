@@ -1,0 +1,10 @@
+<ul>
+  <!--Portfolio's navigation-->
+  {{#foreach navigation}}
+      {{#unless current}}
+        <li>
+          <a href="{{url}}">{{label}}</a>
+        </li>
+      {{/unless}}
+  {{/foreach}}
+</ul>

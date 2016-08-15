@@ -1,13 +1,32 @@
 body#portfolio{
+   
+
+    .background{
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top:0;
+        left:0;
+        background: url('https://s31.postimg.org/n4qu43lln/6776296_beautiful_red_forest_wallpaper.jpg') no-repeat center center;
+        background-size: cover;
+         z-index:-1;
+    }
 
     #introduction{
+         overflow: hidden;
         width: 100vw;
         height: 100vh;
         position: relative;
         margin: 0 auto;
+        
 
-        background: url('https://s31.postimg.org/n4qu43lln/6776296_beautiful_red_forest_wallpaper.jpg') no-repeat center center;
-        background-size: cover;
+        
+        //https://www.google.com.br/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwicq6OLu8LOAhVLlZAKHZ43CeQQjRwIBw&url=http%3A%2F%2Fstuffpoint.com%2Fnature%2Fimage%2F459141%2Fautumn-wallpaper%2F&bvm=bv.129422649,d.Y2I&psig=AFQjCNFAPkgn9Mqf2NNbJfhfF0Hw6UWAMw&ust=1471317528297930
+         //https://static.pexels.com/photos/3186/wood-nature-sun-forest.jpg
+  //https://s31.postimg.org/n4qu43lln/6776296_beautiful_red_forest_wallpaper.jpg
+  //http://www.bebegi.com/wp-content/uploads/2016/06/beautiful-nature-wallpaper-hd-1080p.jpg
+  //https://static.pexels.com/photos/3186/wood-nature-sun-forest.jpg
+  // 
 
         .svg {
             margin: auto;

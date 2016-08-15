@@ -1,0 +1,60 @@
+body#portfolio{
+    svg.head {
+
+        width: 90%;
+
+        @media(min-width: 400px) {
+            width: 85%;
+        }
+        @media(min-width:500px) {
+            width: 75%;
+        }
+        @media(min-width:600px) {
+            width: 65%;
+        }
+        @media(min-width:700px) {
+            width: 60%;
+        }
+        @media(min-width:800px) {
+            width: 55%;
+        }
+        @media(min-width:960px) {
+            width: 45%;
+        }
+        @media(min-width:1100px) {
+            width: 32%;
+        }
+        @media (orientation: landscape) and (max-width:600px) {
+            width: 45%;
+        }
+
+        .piece-animation {
+            animation: fade-out 2s ease-in-out;
+            animation-fill-mode: forwards;
+        }
+        @keyframes fade-out {
+            to {
+                opacity: 0
+            }
+        }
+    }
+
+    .breath {
+        animation: breath 7s ease-in-out infinite;
+        animation-direction: alternate;
+    }
+
+    @keyframes breath {
+        0% {
+            transform: scale(1)
+        }
+        45%,
+        50% {
+            transform: scale(1.08)
+        }
+        100% {
+            transform: scale(1)
+        }
+    }
+
+}

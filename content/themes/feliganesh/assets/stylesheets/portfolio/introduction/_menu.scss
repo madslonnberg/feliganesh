@@ -1,0 +1,22 @@
+body#portfolio{
+    svg.menu{
+        width: 70%;
+
+        text{
+            fill-opacity: 1 !important;
+        }
+
+        #boxes{
+            polygon{  
+                fill: transparent;
+                opacity:0.8;
+
+                &:hover{
+                    fill: #657e0c !important;
+                    cursor: pointer !important;
+                    stroke: white !important;
+                }
+            }
+        }        
+    }
+}

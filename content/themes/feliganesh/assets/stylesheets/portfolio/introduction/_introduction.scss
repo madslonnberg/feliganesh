@@ -1,0 +1,27 @@
+body#portfolio{
+
+    #introduction{
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        margin: 0 auto;
+
+        background: url('https://s31.postimg.org/n4qu43lln/6776296_beautiful_red_forest_wallpaper.jpg') no-repeat center center;
+        background-size: cover;
+
+        .svg {
+            margin: auto;
+            position: relative;
+            width: 100%;
+            z-index: 1;
+            height: 100%;
+
+            svg {
+                position: absolute;
+                top: 50%;
+                left: 50%;                
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}

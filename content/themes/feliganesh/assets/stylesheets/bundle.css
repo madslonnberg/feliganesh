@@ -5,7 +5,6 @@ html {
   font-size: 1rem; }
 
 body#blog {
-  background-color: white;
   font-family: 'Dosis';
   font-weight: 400;
   line-height: 1.618;
@@ -548,227 +547,290 @@ body#portfolio .menu {
     margin: 0;
     padding: 0; }
 
-body#portfolio * {
-  box-sizing: border-box;
-  font-family: 'Dosis', sans-serif; }
+body#portfolio svg.head {
+  width: 90%; }
+  @media (min-width: 400px) {
+    body#portfolio svg.head {
+      width: 85%; } }
+  @media (min-width: 500px) {
+    body#portfolio svg.head {
+      width: 75%; } }
+  @media (min-width: 600px) {
+    body#portfolio svg.head {
+      width: 65%; } }
+  @media (min-width: 700px) {
+    body#portfolio svg.head {
+      width: 60%; } }
+  @media (min-width: 800px) {
+    body#portfolio svg.head {
+      width: 55%; } }
+  @media (min-width: 960px) {
+    body#portfolio svg.head {
+      width: 45%; } }
+  @media (min-width: 1100px) {
+    body#portfolio svg.head {
+      width: 32%; } }
+  @media (orientation: landscape) and (max-width: 600px) {
+    body#portfolio svg.head {
+      width: 45%; } }
+  body#portfolio svg.head .piece-animation {
+    animation: fade-out 2s ease-in-out;
+    animation-fill-mode: forwards; }
 
-body#portfolio ul {
-  list-style: none; }
+@keyframes fade-out {
+  to {
+    opacity: 0; } }
 
-body#portfolio a {
-  text-decoration: none;
-  color: inherit; }
+body#portfolio .breath {
+  animation: breath 7s ease-in-out infinite;
+  animation-direction: alternate; }
 
-body#portfolio body {
-  background: #fdfaf7; }
+@keyframes breath {
+  0% {
+    transform: scale(1); }
+  45%,
+  50% {
+    transform: scale(1.08); }
+  100% {
+    transform: scale(1); } }
 
-body#portfolio img {
-  width: 100%; }
+body#portfolio svg.menu {
+  width: 70%; }
+  body#portfolio svg.menu text {
+    fill-opacity: 1 !important; }
+  body#portfolio svg.menu #boxes polygon {
+    fill: transparent;
+    opacity: 0.8; }
+    body#portfolio svg.menu #boxes polygon:hover {
+      fill: #657e0c !important;
+      cursor: pointer !important;
+      stroke: white !important; }
 
-@media screen and (min-width: 768px) {
-  body#portfolio .hide-for-768-up {
-    display: none; } }
-
-@media screen and (max-width: 768px) {
-  body#portfolio .show-for-768-up {
-    display: none; } }
-
-@media screen and (min-width: 822px) {
-  body#portfolio .hide-for-822-up {
-    display: none; } }
-
-@media screen and (max-width: 822px) {
-  body#portfolio .show-for-822-up {
-    display: none; } }
-
-body#portfolio header nav {
-  color: #333;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  color: #402520; }
-  body#portfolio header nav .menu {
-    display: -ms-flexbox;
-    display: flex;
-    padding-top: 18%;
-    padding-bottom: 18%; }
-    @media screen and (min-width: 768px) {
-      body#portfolio header nav .menu {
-        padding-top: 12%;
-        padding-bottom: 12%; } }
-    body#portfolio header nav .menu ul {
-      padding: 0; }
-      @media screen and (min-width: 768px) {
-        body#portfolio header nav .menu ul {
-          display: -ms-flexbox;
-          display: flex; }
-          body#portfolio header nav .menu ul li {
-            padding-left: 0.8rem; } }
-
-body#portfolio header .ganesh {
-  z-index: 3;
+body#portfolio #introduction {
+  width: 100vw;
+  height: 100vh;
   position: relative;
-  width: 25%; }
-
-body#portfolio main p {
-  color: #5d3f18;
-  margin-top: 0; }
-
-body#portfolio main .text-content {
-  padding-top: 5%; }
-
-body#portfolio main .hero {
-  height: 58.82353vw;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: end;
-  align-items: flex-end;
+  margin: 0 auto;
+  background: url("https://s31.postimg.org/n4qu43lln/6776296_beautiful_red_forest_wallpaper.jpg") no-repeat center center;
   background-size: cover; }
-  @media screen and (min-width: 375px) {
-    body#portfolio main .hero {
-      height: 50vw; } }
-  @media screen and (min-width: 480px) {
-    body#portfolio main .hero {
-      height: 45vw; } }
-  @media screen and (min-width: 768px) {
-    body#portfolio main .hero {
-      height: 36vw; } }
-  @media screen and (min-width: 822px) {
-    body#portfolio main .hero {
-      height: 31vw; } }
-  @media screen and (min-width: 1106px) {
-    body#portfolio main .hero {
-      height: 25vw; } }
-  @media screen and (min-width: 1400px) {
-    body#portfolio main .hero {
-      height: 23vw; } }
-  body#portfolio main .hero .title {
-    margin-bottom: 3%;
-    color: white;
-    text-transform: lowercase;
-    text-shadow: 1px 1px 4px #4d4d4d; }
-
-body#portfolio main .nav-items {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding-top: 0;
-  padding-bottom: 0; }
-  body#portfolio main .nav-items .item {
+  body#portfolio #introduction .svg {
+    margin: auto;
     position: relative;
-    height: 29vw;
-    width: 29vw;
-    background: #657e0c;
-    margin-bottom: 1vw;
-    margin-right: 1vw;
-    color: white; }
-    body#portfolio main .nav-items .item > * {
+    width: 100%;
+    z-index: 1;
+    height: 100%; }
+    body#portfolio #introduction .svg svg {
       position: absolute;
-      right: 3vw;
-      bottom: 3vw; }
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
 
-body#portfolio main .blog-items {
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 2%; }
-  @media screen and (min-width: 1024px) {
-    body#portfolio main .blog-items {
-      padding-top: 0; } }
-  body#portfolio main .blog-items .item {
-    width: 33.33333vw; }
-    body#portfolio main .blog-items .item:not(:last-child) {
-      margin-right: 3%; }
-    body#portfolio main .blog-items .item .image {
-      height: 18.33333vw; }
-      @media screen and (min-width: 822px) {
-        body#portfolio main .blog-items .item .image {
-          height: 12.5vw; } }
-      @media screen and (min-width: 1106px) {
-        body#portfolio main .blog-items .item .image {
-          height: 10.83333vw; } }
-      @media screen and (min-width: 1200px) {
-        body#portfolio main .blog-items .item .image {
-          height: 8.33333vw; } }
-      @media screen and (min-width: 1400px) {
-        body#portfolio main .blog-items .item .image {
-          height: 7.5vw; } }
-    body#portfolio main .blog-items .item .title {
-      margin: 0;
-      text-align: center;
-      margin-top: 7%; }
-      @media screen and (min-width: 480px) {
-        body#portfolio main .blog-items .item .title {
-          font-size: 1rem;
-          margin-top: 0.6rem; } }
-
-body#portfolio main .blog {
-  overflow-x: hidden;
-  padding-top: 0;
-  color: #657e0c; }
-  body#portfolio main .blog svg {
-    width: 130vw;
-    position: relative;
-    top: 12px;
-    right: 20%; }
-    @media screen and (min-width: 375px) {
-      body#portfolio main .blog svg {
-        top: 15px; } }
-    @media screen and (min-width: 535px) {
-      body#portfolio main .blog svg {
-        top: 20px; } }
-    @media screen and (min-width: 822px) {
-      body#portfolio main .blog svg {
-        top: 25px; } }
-    @media screen and (min-width: 1106px) {
-      body#portfolio main .blog svg {
-        top: 35px; } }
-    body#portfolio main .blog svg .triangle {
-      fill: #fbf6ef; }
-  body#portfolio main .blog .label {
-    margin-top: 0; }
-  body#portfolio main .blog .content {
-    position: relative;
-    padding-top: 5%;
-    padding-bottom: 7%;
-    background: #fbf6ef; }
-    @media screen and (min-width: 700px) {
-      body#portfolio main .blog .content {
-        padding-bottom: 5% !important;
-        padding-top: 2.5% !important; } }
-    @media screen and (min-width: 1106px) {
-      body#portfolio main .blog .content {
-        padding-bottom: 4.5% !important;
-        padding-top: 2% !important; } }
-
-body#portfolio footer {
-  background: #657e0c;
-  color: white;
-  padding-top: 4%;
-  padding-bottom: 4%; }
-  @media screen and (min-width: 700px) {
-    body#portfolio footer {
-      padding-bottom: 2.5% !important;
-      padding-top: 2.5% !important; } }
-  @media screen and (min-width: 1106px) {
-    body#portfolio footer {
-      padding-top: 1.6% !important;
-      padding-bottom: 1.6% !important; } }
-  @media screen and (min-width: 1024px) {
-    body#portfolio footer .fa {
-      font-size: 1.2rem; } }
-  body#portfolio footer ul.social {
+body#portfolio {
+  background: red; }
+  body#portfolio * {
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif; }
+  body#portfolio ul {
+    list-style: none; }
+  body#portfolio a {
+    text-decoration: none;
+    color: inherit; }
+  body#portfolio body {
+    background: #fdfaf7; }
+  body#portfolio img {
+    width: 100%; }
+  @media screen and (min-width: 768px) {
+    body#portfolio .hide-for-768-up {
+      display: none; } }
+  @media screen and (max-width: 768px) {
+    body#portfolio .show-for-768-up {
+      display: none; } }
+  @media screen and (min-width: 822px) {
+    body#portfolio .hide-for-822-up {
+      display: none; } }
+  @media screen and (max-width: 822px) {
+    body#portfolio .show-for-822-up {
+      display: none; } }
+  body#portfolio header nav {
+    color: #333;
     display: -ms-flexbox;
     display: flex;
-    padding: 0;
     -ms-flex-pack: end;
     justify-content: flex-end;
-    margin: 0; }
-    body#portfolio footer ul.social li {
-      margin-left: 1rem; }
+    -ms-flex-line-pack: center;
+    align-content: center;
+    color: #402520; }
+    body#portfolio header nav .menu {
+      display: -ms-flexbox;
+      display: flex;
+      padding-top: 18%;
+      padding-bottom: 18%; }
+      @media screen and (min-width: 768px) {
+        body#portfolio header nav .menu {
+          padding-top: 12%;
+          padding-bottom: 12%; } }
+      body#portfolio header nav .menu ul {
+        padding: 0; }
+        @media screen and (min-width: 768px) {
+          body#portfolio header nav .menu ul {
+            display: -ms-flexbox;
+            display: flex; }
+            body#portfolio header nav .menu ul li {
+              padding-left: 0.8rem; } }
+  body#portfolio header .ganesh {
+    z-index: 3;
+    position: relative;
+    width: 25%; }
+  body#portfolio main p {
+    color: #5d3f18;
+    margin-top: 0; }
+  body#portfolio main .text-content {
+    padding-top: 5%; }
+  body#portfolio main .hero {
+    height: 58.82353vw;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    background-size: cover; }
+    @media screen and (min-width: 375px) {
+      body#portfolio main .hero {
+        height: 50vw; } }
+    @media screen and (min-width: 480px) {
+      body#portfolio main .hero {
+        height: 45vw; } }
+    @media screen and (min-width: 768px) {
+      body#portfolio main .hero {
+        height: 36vw; } }
+    @media screen and (min-width: 822px) {
+      body#portfolio main .hero {
+        height: 31vw; } }
+    @media screen and (min-width: 1106px) {
+      body#portfolio main .hero {
+        height: 25vw; } }
+    @media screen and (min-width: 1400px) {
+      body#portfolio main .hero {
+        height: 23vw; } }
+    body#portfolio main .hero .title {
+      margin-bottom: 3%;
+      color: white;
+      text-transform: lowercase;
+      text-shadow: 1px 1px 4px #4d4d4d; }
+  body#portfolio main .nav-items {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-top: 0;
+    padding-bottom: 0; }
+    body#portfolio main .nav-items .item {
+      position: relative;
+      height: 29vw;
+      width: 29vw;
+      background: #657e0c;
+      margin-bottom: 1vw;
+      margin-right: 1vw;
+      color: white; }
+      body#portfolio main .nav-items .item > * {
+        position: absolute;
+        right: 3vw;
+        bottom: 3vw; }
+  body#portfolio main .blog-items {
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 2%; }
+    @media screen and (min-width: 1024px) {
+      body#portfolio main .blog-items {
+        padding-top: 0; } }
+    body#portfolio main .blog-items .item {
+      width: 33.33333vw; }
+      body#portfolio main .blog-items .item:not(:last-child) {
+        margin-right: 3%; }
+      body#portfolio main .blog-items .item .image {
+        height: 18.33333vw; }
+        @media screen and (min-width: 822px) {
+          body#portfolio main .blog-items .item .image {
+            height: 12.5vw; } }
+        @media screen and (min-width: 1106px) {
+          body#portfolio main .blog-items .item .image {
+            height: 10.83333vw; } }
+        @media screen and (min-width: 1200px) {
+          body#portfolio main .blog-items .item .image {
+            height: 8.33333vw; } }
+        @media screen and (min-width: 1400px) {
+          body#portfolio main .blog-items .item .image {
+            height: 7.5vw; } }
+      body#portfolio main .blog-items .item .title {
+        margin: 0;
+        text-align: center;
+        margin-top: 7%; }
+        @media screen and (min-width: 480px) {
+          body#portfolio main .blog-items .item .title {
+            font-size: 1rem;
+            margin-top: 0.6rem; } }
+  body#portfolio main .blog {
+    overflow-x: hidden;
+    padding-top: 0;
+    color: #657e0c; }
+    body#portfolio main .blog svg {
+      width: 130vw;
+      position: relative;
+      top: 12px;
+      right: 20%; }
+      @media screen and (min-width: 375px) {
+        body#portfolio main .blog svg {
+          top: 15px; } }
+      @media screen and (min-width: 535px) {
+        body#portfolio main .blog svg {
+          top: 20px; } }
+      @media screen and (min-width: 822px) {
+        body#portfolio main .blog svg {
+          top: 25px; } }
+      @media screen and (min-width: 1106px) {
+        body#portfolio main .blog svg {
+          top: 35px; } }
+      body#portfolio main .blog svg .triangle {
+        fill: #fbf6ef; }
+    body#portfolio main .blog .label {
+      margin-top: 0; }
+    body#portfolio main .blog .content {
+      position: relative;
+      padding-top: 5%;
+      padding-bottom: 7%;
+      background: #fbf6ef; }
+      @media screen and (min-width: 700px) {
+        body#portfolio main .blog .content {
+          padding-bottom: 5% !important;
+          padding-top: 2.5% !important; } }
+      @media screen and (min-width: 1106px) {
+        body#portfolio main .blog .content {
+          padding-bottom: 4.5% !important;
+          padding-top: 2% !important; } }
+  body#portfolio footer {
+    background: #657e0c;
+    color: white;
+    padding-top: 4%;
+    padding-bottom: 4%; }
+    @media screen and (min-width: 700px) {
+      body#portfolio footer {
+        padding-bottom: 2.5% !important;
+        padding-top: 2.5% !important; } }
+    @media screen and (min-width: 1106px) {
+      body#portfolio footer {
+        padding-top: 1.6% !important;
+        padding-bottom: 1.6% !important; } }
+    @media screen and (min-width: 1024px) {
+      body#portfolio footer .fa {
+        font-size: 1.2rem; } }
+    body#portfolio footer ul.social {
+      display: -ms-flexbox;
+      display: flex;
+      padding: 0;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      margin: 0; }
+      body#portfolio footer ul.social li {
+        margin-left: 1rem; }
 
 .masonry .item, .masonry .sizer {
   width: 100%; }

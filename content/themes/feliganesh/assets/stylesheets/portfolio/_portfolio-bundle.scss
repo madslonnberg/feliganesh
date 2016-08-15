@@ -2,8 +2,13 @@
 @import 'typography';
 @import 'variables';
 @import 'menu';
+@import 'introduction/head';
+@import 'introduction/menu';
+@import 'introduction/introduction';
 
 body#portfolio{
+
+    background: red;
     * {
         box-sizing: border-box;
         font-family: 'Dosis', sans-serif;

@@ -1,10 +1,8 @@
 <ul>
   <!--Portfolio's navigation-->
   {{#foreach navigation}}
-      {{#unless current}}
-        <li>
-          <a href="{{url}}">{{label}}</a>
-        </li>
-      {{/unless}}
+      <li {{#if current}}style="font-weight:bolder"{{/if}}>
+        <a href="{{url}}">{{label}}</a>
+      </li>
   {{/foreach}}
 </ul>

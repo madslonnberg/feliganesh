@@ -1,5 +1,11 @@
 body#blog{
 
+    main#authors-list{
+        .profile{
+            margin-bottom: 2rem;
+        }
+    }
+
     main#author, main#authors-list{
 
         a{
@@ -18,7 +24,8 @@ body#blog{
 
             .content{
                 position: relative;                
-                margin-top: -21vw;                
+                margin-top: -21vw;
+                              
 
                 .image{       
                     $width: 30vw;

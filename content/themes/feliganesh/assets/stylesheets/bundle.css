@@ -105,13 +105,11 @@ body#blog #post .footer {
     background-position: center; }
   body#blog #post .footer .author-details {
     width: 66.66667%;
-    padding: 2.5% 5%;
+    padding-bottom: 13px;
+    padding: 2vw 5%;
     background: #e7e0d9;
     display: -ms-flexbox;
     display: flex; }
-    @media (min-width: 714px) {
-      body#blog #post .footer .author-details {
-        padding: 6% 5%; } }
     body#blog #post .footer .author-details .content .name, body#blog #post .footer .author-details .content .description {
       margin: 0;
       margin-bottom: 0.5rem; }
@@ -130,6 +128,9 @@ body#blog #post .footer {
           font-size: 1rem; } }
     body#blog #post .footer .author-details .content .more a {
       color: inherit; }
+
+body#blog main#authors-list .profile {
+  margin-bottom: 2rem; }
 
 body#blog main#author a, body#blog main#authors-list a {
   text-decoration: none;
@@ -513,17 +514,23 @@ body#portfolio .menu {
   body#portfolio .menu .menu-header {
     font-weight: 700;
     position: relative;
-    display: -ms-flexbox;
-    display: flex;
     -ms-flex-align: center;
+    -ms-grid-row-align: center;
     align-items: center;
     text-transform: lowercase;
     z-index: 3; }
+    body#portfolio .menu .menu-header > * {
+      float: left; }
+    body#portfolio .menu .menu-header::after {
+      content: '';
+      display: block;
+      clear: both; }
     body#portfolio .menu .menu-header > *:first-child {
       padding-right: 0.8rem; }
     body#portfolio .menu .menu-header .fa {
       position: relative;
-      top: 2px;
+      transform: translateY(-50%);
+      top: 0.7rem;
       font-size: 1.2rem; }
   body#portfolio .menu .menu-options {
     opacity: 0.95;
@@ -550,7 +557,8 @@ body#portfolio .menu {
 
 body#portfolio svg.head {
   width: 90%;
-  opacity: 0.65; }
+  opacity: 0.65;
+  cursor: pointer; }
   @media (min-width: 400px) {
     body#portfolio svg.head {
       width: 85%; } }
@@ -597,12 +605,26 @@ body#portfolio .breath {
     transform: scale(1); } }
 
 body#portfolio svg.menu {
-  width: 70%;
-  cursor: pointer;
+  width: 98%;
   display: none;
   opacity: 0.7; }
   body#portfolio svg.menu text {
-    fill-opacity: 1 !important; }
+    fill-opacity: 1 !important;
+    font-size: 1.7rem; }
+  @media (min-width: 830px) {
+    body#portfolio svg.menu {
+      width: 85%; }
+    body#portfolio svg.menu text {
+      font-size: 1.5rem; } }
+  @media (min-width: 1080px) {
+    body#portfolio svg.menu {
+      width: 76%; } }
+  @media (min-width: 1280px) {
+    body#portfolio svg.menu {
+      width: 67%; } }
+  @media (min-width: 1400px) {
+    body#portfolio svg.menu {
+      width: 60%; } }
   body#portfolio svg.menu #boxes polygon {
     fill: transparent; }
     body#portfolio svg.menu #boxes polygon:hover {
@@ -665,30 +687,39 @@ body#portfolio {
       display: none; } }
   body#portfolio header nav {
     color: #333;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
     -ms-flex-line-pack: center;
     align-content: center;
     color: #402520; }
+    body#portfolio header nav::after {
+      display: block;
+      content: '';
+      clear: both; }
     body#portfolio header nav .menu {
-      display: -ms-flexbox;
-      display: flex;
-      padding-top: 18%;
-      padding-bottom: 18%; }
+      padding-top: 4vw;
+      padding-bottom: 4vw;
+      float: right; }
       @media screen and (min-width: 768px) {
         body#portfolio header nav .menu {
-          padding-top: 10%;
-          padding-bottom: 10%; } }
+          padding-top: 4vw;
+          padding-bottom: 4vw; } }
+      @media screen and (min-width: 980px) {
+        body#portfolio header nav .menu {
+          padding-top: 3vw;
+          padding-bottom: 3vw; } }
+      @media screen and (min-width: 1400px) {
+        body#portfolio header nav .menu {
+          padding-top: 2vw;
+          padding-bottom: 2vw; } }
       body#portfolio header nav .menu ul {
         padding: 0; }
+        body#portfolio header nav .menu ul::after {
+          display: block;
+          content: '';
+          clear: both; }
         @media screen and (min-width: 768px) {
-          body#portfolio header nav .menu ul {
-            display: -ms-flexbox;
-            display: flex; }
-            body#portfolio header nav .menu ul li {
-              padding-left: 0.8rem; } }
+          body#portfolio header nav .menu ul li {
+            float: right;
+            padding-left: 0.8rem; } }
   body#portfolio header .ganesh {
     z-index: 3;
     position: relative;
@@ -700,11 +731,8 @@ body#portfolio {
     padding-top: 5%; }
   body#portfolio main .hero {
     height: 58.82353vw;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: end;
-    align-items: flex-end;
-    background-size: cover; }
+    background-size: cover;
+    position: relative; }
     @media screen and (min-width: 375px) {
       body#portfolio main .hero {
         height: 50vw; } }
@@ -724,15 +752,13 @@ body#portfolio {
       body#portfolio main .hero {
         height: 23vw; } }
     body#portfolio main .hero .title {
+      position: absolute;
+      bottom: 0;
       margin-bottom: 3%;
       color: white;
       text-transform: lowercase;
       text-shadow: 1px 1px 4px #4d4d4d; }
   body#portfolio main .nav-items {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
     padding-top: 0;
     padding-bottom: 0; }
     body#portfolio main .nav-items .item {
@@ -748,30 +774,36 @@ body#portfolio {
         right: 3vw;
         bottom: 3vw; }
   body#portfolio main .blog-items {
-    display: -ms-flexbox;
-    display: flex;
     padding-top: 2%; }
+    body#portfolio main .blog-items::after {
+      display: block;
+      content: '';
+      clear: both; }
     @media screen and (min-width: 1024px) {
       body#portfolio main .blog-items {
         padding-top: 0; } }
     body#portfolio main .blog-items .item {
-      width: 33.33333vw; }
+      float: left;
+      width: 32%; }
       body#portfolio main .blog-items .item:not(:last-child) {
-        margin-right: 3%; }
+        margin-right: 2%; }
+      @media screen and (min-width: 822px) {
+        body#portfolio main .blog-items .item {
+          width: 23.5%; } }
       body#portfolio main .blog-items .item .image {
-        height: 18.33333vw; }
+        height: 17vw; }
         @media screen and (min-width: 822px) {
           body#portfolio main .blog-items .item .image {
-            height: 12.5vw; } }
+            height: 14vw; } }
         @media screen and (min-width: 1106px) {
           body#portfolio main .blog-items .item .image {
-            height: 10.83333vw; } }
+            height: 12vw; } }
         @media screen and (min-width: 1200px) {
           body#portfolio main .blog-items .item .image {
-            height: 8.33333vw; } }
+            height: 10vw; } }
         @media screen and (min-width: 1400px) {
           body#portfolio main .blog-items .item .image {
-            height: 7.5vw; } }
+            height: 8vw; } }
       body#portfolio main .blog-items .item .title {
         margin: 0;
         text-align: center;
@@ -783,33 +815,21 @@ body#portfolio {
   body#portfolio main .blog {
     overflow-x: hidden;
     padding-top: 0;
-    color: #657e0c; }
+    color: #657e0c;
+    padding-top: 5vw; }
     body#portfolio main .blog svg {
-      width: 130vw;
-      position: relative;
-      top: 12px;
-      right: 20%; }
-      @media screen and (min-width: 375px) {
-        body#portfolio main .blog svg {
-          top: 15px; } }
-      @media screen and (min-width: 535px) {
-        body#portfolio main .blog svg {
-          top: 20px; } }
-      @media screen and (min-width: 822px) {
-        body#portfolio main .blog svg {
-          top: 25px; } }
-      @media screen and (min-width: 1106px) {
-        body#portfolio main .blog svg {
-          top: 35px; } }
-      body#portfolio main .blog svg .triangle {
+      height: 6vw;
+      width: 100%; }
+      body#portfolio main .blog svg polygon {
         fill: #fbf6ef; }
     body#portfolio main .blog .label {
       margin-top: 0; }
     body#portfolio main .blog .content {
       position: relative;
       padding-top: 5%;
-      padding-bottom: 7%;
-      background: #fbf6ef; }
+      padding-bottom: 8%;
+      background: #fbf6ef;
+      margin-top: -10px; }
       @media screen and (min-width: 700px) {
         body#portfolio main .blog .content {
           padding-bottom: 5% !important;
@@ -835,14 +855,15 @@ body#portfolio {
       body#portfolio footer .fa {
         font-size: 1.2rem; } }
     body#portfolio footer ul.social {
-      display: -ms-flexbox;
-      display: flex;
       padding: 0;
-      -ms-flex-pack: end;
-      justify-content: flex-end;
       margin: 0; }
+      body#portfolio footer ul.social::after {
+        display: block;
+        content: '';
+        clear: both; }
       body#portfolio footer ul.social li {
-        margin-left: 1rem; }
+        margin-left: 1rem;
+        float: right; }
 
 .masonry .item, .masonry .sizer {
   width: 100%; }

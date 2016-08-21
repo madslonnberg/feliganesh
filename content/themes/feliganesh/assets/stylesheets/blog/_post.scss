@@ -49,13 +49,10 @@ body#blog{
 
       .author-details{
         width: 2/3*100%;
-        padding: 2.5% 5%;
+        padding-bottom: 13px;
+        padding: 2vw 5%;
         background: hsl(30,23%,88%);
         display: flex;
-
-        @media(min-width: 714px){
-          padding: 6% 5%;
-        }
 
         .content{
           .name, .description{

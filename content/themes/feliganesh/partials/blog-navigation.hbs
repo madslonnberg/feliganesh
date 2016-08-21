@@ -1,11 +1,6 @@
 <nav>
     <ul>
         <li><a href="/blog">home</a></li>
-        {{#get "users" limit="all"}}            
-            {{#if users.length}}
-                <li><a href="/tag/blog-authors">authors</a></li>
-            {{/if}}
-        {{/get}}
-
+        <li><a href="/tag/blog-authors">authors</a></li>
     </ul>
 </nav>

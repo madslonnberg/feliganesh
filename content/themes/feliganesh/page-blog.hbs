@@ -6,6 +6,9 @@
 
         <main>
             <div class="grid ">
+                <header>
+                    {{>blog-navigation}}
+                </header>
                 
                 <div class="masonry">
                     <div class="sizer"></div>
@@ -17,9 +20,7 @@
                         {{/foreach}}            
                     {{/get}}                    
                 </div>
-                <footer>
-                    {{>blog-navigation}}
-                </footer>
+         
             </div>
             
         </main> 

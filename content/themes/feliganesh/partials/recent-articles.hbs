@@ -1,6 +1,7 @@
 <!--This template is used inside portifolio's pages in order to get the blog's content-->
-{{#get "posts" limit=maxItems filter="tags:[blog]" as |recents| }}
-    <div class="blog-items">
+
+{{#get "posts" limit=maxItems filter="tags:[article]" as |recents| }}
+     <div class="blog-items">
         {{#foreach recents}}
                 <div class="item">
                     <a href="{{url}}">

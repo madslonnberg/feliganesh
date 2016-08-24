@@ -9,8 +9,22 @@ body#portfolio{
     }
 
     .menu {
-        color: $c1;
+        color: $letter;
         position: relative;
+ 
+
+        li{
+
+            &:hover{
+                color: $letter-menu-hover;
+            }
+
+            &.selected{
+              color: $letter-menu-hover;
+              font-weight: bold;      
+            }
+
+        }
 
 
         * {

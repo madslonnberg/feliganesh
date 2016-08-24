@@ -280,7 +280,8 @@ body#blog {
     color: #443631;
     height: 100%;
     padding-left: 1rem;
-    padding-right: 1rem; }
+    padding-right: 1rem;
+    height: 190vh; }
     body#blog aside::after {
       content: '';
       display: block;
@@ -430,7 +431,7 @@ body#portfolio .grid {
 
 body#portfolio {
   background-color: white;
-  font-family: 'Dosis', serif;
+  font-family: 'avenir', serif;
   font-weight: 400;
   line-height: 1.45;
   color: #333; }
@@ -496,6 +497,28 @@ body#portfolio {
     body#portfolio h5 {
       font-size: 1.4  em; } }
 
+@font-face {
+  font-family: 'journal';
+  src: url("./portfolio/typography/journal/journal.eot");
+  /* IE9 Compat Modes */
+  src: url("./portfolio/typography/journal/journal.eot?#iefix") format("embedded-opentype"), url("./portfolio/typography/journal/journal.woff2") format("woff2"), url("./portfolio/typography/journal/journal.woff") format("woff"), url("./portfolio/typography/journal/journal.ttf") format("truetype"), url("./portfolio/typography/journal/journal.svg#svgFontName") format("svg");
+  /* Legacy iOS */ }
+
+@font-face {
+  font-family: 'avenir';
+  src: url("./portfolio/typography/avenir-light/AvenirLTStd-Light.eot");
+  /* IE9 Compat Modes */
+  src: url("./portfolio/typography/avenir-light/AvenirLTStd-Light.eot?#iefix") format("embedded-opentype"), url("./portfolio/typography/avenir-light/AvenirLTStd-Light.woff2") format("woff2"), url("./portfolio/typography/avenir-light/AvenirLTStd-Light.woff") format("woff"), url("./portfolio/typography/avenir-light/AvenirLTStd-Light.ttf") format("truetype"), url("./portfolio/typography/avenir-light/AvenirLTStd-Light.svg#svgFontName") format("svg");
+  /* Legacy iOS */ }
+
+@font-face {
+  font-family: 'avenir';
+  font-weight: bold;
+  src: url("./portfolio/typography/avenir-heavy/AvenirLTStd-Heavy.eot");
+  /* IE9 Compat Modes */
+  src: url("./portfolio/typography/avenir-heavy/AvenirLTStd-Heavy.eot?#iefix") format("embedded-opentype"), url("./portfolio/typography/avenir-heavy/AvenirLTStd-Heavy.woff2") format("woff2"), url("./portfolio/typography/avenir-heavy/AvenirLTStd-Heavy.woff") format("woff"), url("./portfolio/typography/avenir-heavy/AvenirLTStd-Heavy.ttf") format("truetype"), url("./portfolio/typography/avenir-heavy/AvenirLTStd-Heavy.svg#svgFontName") format("svg");
+  /* Legacy iOS */ }
+
 body#portfolio .wrapper {
   width: 100vw;
   position: absolute;
@@ -504,8 +527,13 @@ body#portfolio .wrapper {
   z-index: 2; }
 
 body#portfolio .menu {
-  color: #657e0c;
+  color: #2c2c30;
   position: relative; }
+  body#portfolio .menu li:hover {
+    color: orange; }
+  body#portfolio .menu li.selected {
+    color: orange;
+    font-weight: bold; }
   body#portfolio .menu * {
     font-size: 1.4rem;
     margin: 0;
@@ -661,7 +689,7 @@ body#portfolio #introduction {
       transform: translate(-50%, -50%); }
 
 body#portfolio {
-  font-family: 'Dosis', sans-serif; }
+  font-family: 'avenir', sans-serif; }
   body#portfolio * {
     box-sizing: border-box; }
   body#portfolio ul {
@@ -725,7 +753,7 @@ body#portfolio {
     position: relative;
     width: 25%; }
   body#portfolio main p {
-    color: #5d3f18;
+    color: #2c2c30;
     margin-top: 0; }
   body#portfolio main .text-content {
     padding-top: 5%; }
@@ -815,7 +843,7 @@ body#portfolio {
   body#portfolio main .blog {
     overflow-x: hidden;
     padding-top: 0;
-    color: #657e0c;
+    color: #2c2c30;
     padding-top: 5vw; }
     body#portfolio main .blog svg {
       height: 6vw;
@@ -839,7 +867,7 @@ body#portfolio {
           padding-bottom: 4.5% !important;
           padding-top: 2% !important; } }
   body#portfolio footer {
-    background: #657e0c;
+    background: #1E400B;
     color: white;
     padding-top: 4%;
     padding-bottom: 4%; }

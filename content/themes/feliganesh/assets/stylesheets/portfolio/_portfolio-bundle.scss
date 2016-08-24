@@ -1,5 +1,5 @@
 @import 'grid';
-@import 'typography';
+@import 'typography/typography';
 @import 'variables';
 @import 'menu';
 @import 'introduction/head';
@@ -7,7 +7,7 @@
 @import 'introduction/introduction';
 
 body#portfolio{
-    font-family: 'Dosis', sans-serif;
+    font-family: 'avenir', sans-serif;
 
     * {
         box-sizing: border-box;
@@ -134,7 +134,7 @@ body#portfolio{
 
     main {
         p {
-            color: $p;
+            color: $letter;
             margin-top: 0;
             
         }
@@ -272,7 +272,7 @@ body#portfolio{
         .blog {
             overflow-x: hidden;
             padding-top: 0;
-            color: $c1;
+            color: $letter;
             padding-top:5vw;
 
 
@@ -314,7 +314,7 @@ body#portfolio{
     }
 
     footer {
-        background: $c1;
+        background: $footer;
         color: white;
         $padding: 4%;
 

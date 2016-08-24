@@ -5,7 +5,7 @@ var folderThemeName='feliganesh';
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
-
+    
     browserSync.init(null, {
         proxy: "http://localhost:2368/",
         notify: false,

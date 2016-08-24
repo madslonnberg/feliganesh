@@ -333,18 +333,16 @@
 		
 		$('text').mouseover(function(){
 			$(this).css('cursor', 'pointer');
-			$(this).prev().css({
-			'fill':'#657e0c',
-			'stroke': 'none',
+			// $(this).prev().css({
+			// 'fill':'#657e0c',
+			// 'stroke': 'none',
 			
-			})
+			// })
+
+			$(this).prev().addClass('selected');
 		}).mouseleave(function(){
 			$(this).css('cursor', 'default');
-			$(this).prev().css({
-			'fill':'transparent',
-				'stroke': 'white',
-				'cursor': 'white'
-			})
+			$(this).prev().removeClass('selected');
 		})
 	}
 

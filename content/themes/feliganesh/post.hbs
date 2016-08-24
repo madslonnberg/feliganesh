@@ -4,7 +4,7 @@
 
   <body id="portfolio" ng-app="masonryModule">
     {{#post}}  
-      {{> header title=this.title}}
+      {{> header title=this.title }}
           
       <main>
           <div class="hero" style="background:url('{{image}}') no-repeat center center; background-size:cover">
@@ -27,7 +27,10 @@
                     {{/get}}                    
                 </div>              
               {{else}}
-                <div class="text-content">{{content}}</div>
+                <div class="text-content">
+                    {{#has tag="article"}}<div class="details small">by {{author.name}} | {{date format="DD MMM YYYY"}}</div>{{/has}}
+                    {{content}}
+                </div>
               {{/has}}
           </div>
 

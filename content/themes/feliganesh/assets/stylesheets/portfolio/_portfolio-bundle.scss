@@ -1,13 +1,18 @@
 @import 'grid';
-@import 'typography/typography';
 @import 'variables';
+@import 'typography/typography';
 @import 'menu';
 @import 'introduction/head';
 @import 'introduction/menu';
 @import 'introduction/introduction';
 
 body#portfolio{
+
     font-family: 'avenir', sans-serif;
+
+    a{
+        cursor: pointer !important;
+    }
 
     * {
         box-sizing: border-box;
@@ -141,6 +146,14 @@ body#portfolio{
 
         .text-content{
             padding-top: 5%;
+
+            @media (min-width:900px){
+                padding-top: 3.5%;
+            }
+            
+            .details{
+                margin-bottom: 0.8rem;
+            }
         }
 
     
@@ -205,6 +218,56 @@ body#portfolio{
                 }
             }
         }
+
+        .item, img{
+            border-radius: 11px 11px 0px 0px;
+            background: hsl(35, 30%, 98%);;
+        }
+
+        .masonry{
+
+            margin-top: 3.5rem;
+
+            a{
+                font-weight: inherit;
+                text-decoration:none;
+            }
+         
+
+            .item{
+                margin-bottom: 40px;
+                &::after{
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+            }
+
+            .text{
+                padding:6%;
+                padding-top: 3%;
+
+                h3{
+                    margin:0;
+                    font-weight: inherit;
+                }
+
+                p{
+                    margin-top: 0.25rem;
+                    font-size: 1.15rem;
+                }
+
+                .title, .author{
+                    color:hsl(16, 16%, 23%);
+                }
+            }        
+
+            p{
+                font-size: 1.2rem;
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+            }
+        }        
         .blog-items {
             // display: flex;
             padding-top: 2%;
@@ -227,6 +290,8 @@ body#portfolio{
                 float: left;
 
                 width: $width;
+
+                
 
                 &:not(:last-child) {
                     margin-right: $margin-right;
@@ -296,6 +361,7 @@ body#portfolio{
                 background: $c2;
                 margin-top:-10px;
                 
+                
 
                 
                 @media screen and (min-width: 700px){
@@ -354,6 +420,7 @@ body#portfolio{
             li {
                 margin-left: 1rem;
                 float: right;
+                cursor: pointer;
             }
         }
     }

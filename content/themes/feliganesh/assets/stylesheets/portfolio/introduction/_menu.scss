@@ -41,15 +41,24 @@ body#portfolio{
             }
         }
 
+        polygon:hover, .selected{
+            fill: $introduction-menu !important;
+            stroke: none !important
+        }
+
         #boxes{
             polygon{  
                 fill: transparent;
+                cursor: pointer;
                 
-                &:hover{
-                    fill: #657e0c !important;
-                    cursor: pointer !important;
-                    stroke: white !important;
-                }
+                // &:hover{
+                //     fill: #657e0c !important;
+                //     cursor: pointer !important;
+                //     stroke: white !important;
+                // }
+
+                
+
             }
         }        
     }

@@ -13,9 +13,9 @@ $gutter: 1.5%;
     @media(min-width: 1024px) {
       width: (100%-$gutter*3)/4;
     }
-    @media(min-width: 1200px) {
-      width: (100%-$gutter*4)/5;
-    }
+    // @media(min-width: 1200px) {
+    //   width: (100%-$gutter*4)/5;
+    // }
   }
 
   .big{
@@ -27,9 +27,9 @@ $gutter: 1.5%;
     @media(min-width: 1024px) {
       width: (100%-$gutter*3)*2/4;
     }
-    @media(min-width: 1200px) {
-      width: (100%-$gutter*4)*2/5;
-    }
+    // @media(min-width: 1200px) {
+    //   width: (100%-$gutter*4)*2/5;
+    // }
   }
 
   .item {

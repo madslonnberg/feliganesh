@@ -173,6 +173,7 @@ body#portfolio{
             }
 
             @media screen and (min-width:768px) {
+                background-attachment: fixed !important; 
                 height: 36vw;
             }
 

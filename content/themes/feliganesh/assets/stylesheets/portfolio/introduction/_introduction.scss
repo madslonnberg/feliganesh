@@ -4,12 +4,22 @@ body#portfolio{
     .background{
         width: 100vw;
         height: 100vh;
-        position: absolute;
+        position: fixed;
         top:0;
         left:0;
-        background: url('https://s31.postimg.org/n4qu43lln/6776296_beautiful_red_forest_wallpaper.jpg') no-repeat center center;
         background-size: cover;
          z-index:-1;
+
+         video{
+             position: fixed; 
+             right: 0; 
+             bottom: 0; 
+             min-width: 100%; 
+             min-height: 100%; 
+             width: auto; 
+             height: auto; 
+             z-index: -100;
+         }
     }
 
     #introduction{

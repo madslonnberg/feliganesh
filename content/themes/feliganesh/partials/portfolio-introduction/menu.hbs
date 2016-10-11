@@ -9,7 +9,7 @@
 		.st6{fill:url(#SVGID_6_);}
 		.st7{fill:url(#XMLID_102_);}
 		.st8{fill:none;stroke:#FFFFFF;stroke-width:0.5669;stroke-miterlimit:10;}
-		.st9{font-family:'Dosis'; font-weight: 500}
+		.st9{font-family:'avenir'; font-weight: 500}
 		.st10{font-size:23.1852px; }
 		.st11{fill:url(#light-path-6_1_);}
 		.st12{fill:url(#light-path-5_1_);}
@@ -17,6 +17,7 @@
 		.st14{fill:url(#XMLID_104_);}
 		.st15{fill:url(#XMLID_105_);}
 		.st16{fill:url(#XMLID_106_);}
+		text{letter-spacing: 3px;}
 	</style>
 	<g id="all">
 		<g id="triangle">
@@ -296,12 +297,12 @@
 
 			$('#triangle, #boxes, #texts, #light-paths, #lines').css('opacity',0);
 		
-			var duration = 20;
+			var duration = 10;
 			animateTriangleStroke(duration);
 			showLines(30);
 			
 			setTimeout(function(){
-				showBoxes(40,30);
+				showBoxes(1,30);
 			}, duration*450);
 		});
 	

@@ -1,8 +1,7 @@
-@charset "UTF-8";
-@import 'https://fonts.googleapis.com/css?family=Dosis:400,500,600';
 @import 'https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope';
 html {
-  font-size: 1rem; }
+  font-size: 1rem;
+  font-family: 'avenir'; }
 
 body#blog {
   font-family: 'avenir';
@@ -572,12 +571,47 @@ body#portfolio {
   src: url("./portfolio/typography/avenir-heavy/AvenirLTStd-Heavy.eot?#iefix") format("embedded-opentype"), url("./portfolio/typography/avenir-heavy/AvenirLTStd-Heavy.woff2") format("woff2"), url("./portfolio/typography/avenir-heavy/AvenirLTStd-Heavy.woff") format("woff"), url("./portfolio/typography/avenir-heavy/AvenirLTStd-Heavy.ttf") format("truetype"), url("./portfolio/typography/avenir-heavy/AvenirLTStd-Heavy.svg#svgFontName") format("svg");
   /* Legacy iOS */ }
 
+body#portfolio header {
+  max-width: 100vw !important;
+  position: fixed;
+  z-index: 15;
+  background: #fdfaf7;
+  opacity: 0.9;
+  width: 100%; }
+
 body#portfolio .wrapper {
   width: 100vw;
   position: absolute;
   background: #fdfaf7;
   left: 0;
   z-index: 2; }
+
+body#portfolio main {
+  padding-top: 18vw; }
+  @media (min-width: 436px) {
+    body#portfolio main {
+      padding-top: 16vw; } }
+  @media (min-width: 472px) {
+    body#portfolio main {
+      padding-top: 15vw; } }
+  @media (min-width: 726px) {
+    body#portfolio main {
+      padding-top: 13vw; } }
+  @media (min-width: 810px) {
+    body#portfolio main {
+      padding-top: 11vw; } }
+  @media (min-width: 900px) {
+    body#portfolio main {
+      padding-top: 9vw; } }
+  @media (min-width: 1042px) {
+    body#portfolio main {
+      padding-top: 8vw; } }
+  @media (min-width: 1356px) {
+    body#portfolio main {
+      padding-top: 6vw; } }
+  @media (min-width: 1476px) {
+    body#portfolio main {
+      padding-top: 5.5vw; } }
 
 body#portfolio .menu {
   color: #2c2c30;
@@ -596,7 +630,6 @@ body#portfolio .menu {
     font-weight: 700;
     position: relative;
     -ms-flex-align: center;
-    -ms-grid-row-align: center;
     align-items: center;
     text-transform: lowercase;
     z-index: 3; }
@@ -1011,11 +1044,4 @@ body#portfolio {
   width: 1.5%; }
 
 blockquote {
-  quotes: "“" "”" "‘" "’";
   text-align: center; }
-
-blockquote p:before {
-  content: open-quote; }
-
-blockquote p:after {
-  content: close-quote; }

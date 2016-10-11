@@ -1,18 +1,10 @@
-@import 'https://fonts.googleapis.com/css?family=Dosis:400,500,600';
 @import 'https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope';
 @import 'blog/blog-bundle';
 @import 'portfolio/portfolio-bundle';
 @import '../components/**/*.scss';
 
-blockquote {
-  quotes: "“" "”" "‘" "’";
-  text-align: center; 
-
+blockquote { 
+  text-align: center 
 }
-blockquote p:before {
-    content: open-quote;
-}
-blockquote p:after {
-    content: close-quote;
-}
-
+ 
+   

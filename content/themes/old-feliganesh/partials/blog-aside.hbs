@@ -1,0 +1,104 @@
+<!--Useful when menu is open-->
+
+<div class="menu-layer"></div>
+<aside>
+  <header>
+    <svg viewBox="0 0 1177.8 488.9" preserveAspectRatio="none">
+      <polygon points="0,0 0,488.9 1177.8,270.4 1177.8,0 "/>
+    </svg>
+  </header>
+
+  <!--Animated Hambuger-->
+  <div id="nav-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  
+  <div class="profile">
+
+    <!--Get author information-->
+    {{#get "users" filter="slug:lonnberg"}}
+      {{#foreach users}}
+        <div class="images" style="background-image: url('{{image}}'); background-size: cover"></div>
+
+        <h1 class="name">{{name}}</h1>
+        <div class="bio">{{bio}}</div>
+        <div class="icons">
+          {{> social}}
+        </div>     
+      {{/foreach}}
+    {{/get}}
+
+    
+  </div>  
+</aside>
+
+<script>
+  $(document).ready(function(){
+
+    var $navIcon = $('#nav-icon');
+
+    $('.menu-layer, aside, .profile, #nav-icon').css('transition','500ms ease-in-out');
+
+    $('#nav-icon').click(function(){
+      switchOpeness();
+      centerIcon();
+    });
+
+
+    closeMenu();
+    centerIcon();
+
+    $(window).resize(function(){
+       closeMenu();
+       centerIcon();
+    })
+
+
+    function centerIcon(){
+      var mainLeft = $('main').position().left;
+      var iconWidth = $('#nav-icon').width();
+
+      var right = (mainLeft - iconWidth)/2;
+
+      console.log(right, mainLeft, iconWidth)
+
+
+      $('#nav-icon').css({
+        'right': right+'px',
+      })
+
+    }
+
+    function switchOpeness(){
+      if(opened){
+        closeMenu()
+      }else{
+        openMenu();
+      }
+    }
+
+
+    function openMenu(){      
+      $('aside').css('left',0+'px');
+      $(this).add('#nav-icon, .profile, aside, .menu-layer').addClass('open');
+      opened = true;
+    }
+
+    function closeMenu(){
+      var mainLeft = $('main').position().left;
+      var asideWidth = $('aside').outerWidth();
+
+      $('aside').css('left',(mainLeft-asideWidth)+'px');
+      $('#nav-icon, .profile, aside, .menu-layer').removeClass('open');
+      opened = false;
+    }
+
+
+    
+
+
+  });
+</script>

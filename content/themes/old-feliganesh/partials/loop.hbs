@@ -1,0 +1,14 @@
+               
+<div class="item {{#if featured}}big{{/if}}" >
+    <a href="{{url}}">
+        <img src="{{image}}" >
+        <div class="text">
+            <h3 class="title">{{title}}</h3>
+            <span class="author small">by {{author.name}}</span>
+            <p class="content">                    
+                {{ excerpt words=this.words }}
+            </p>
+        </div>
+    </a>
+</div>
+ 

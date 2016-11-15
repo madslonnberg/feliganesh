@@ -1,0 +1,133 @@
+body#blog{
+
+    main#authors-list{
+        .profile{
+            margin-bottom: 2rem;
+        }
+    }
+
+    main#author, main#authors-list{
+
+        a{
+            text-decoration: none;
+            font-weight: initial;
+        }
+
+        .profile{            
+            background: hsl(37, 39%, 95%);     
+            
+            a{
+                text-decoration: none;
+                font-weight: initial;
+            }
+
+
+            .content{
+                position: relative;                
+                margin-top: -21vw;
+                              
+
+                .image{       
+                    $width: 30vw;
+                   
+                    width: $width;
+                    height: $width;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 15%;
+                    border: 3px solid #f5f2ef;
+                    margin-bottom: 0.8rem;
+                }
+
+                @media(min-width:600px){
+                    margin-top:-19vw;
+
+                    .image{
+                        $width: 25vw;
+                   
+                        width: $width;
+                        height: $width;  
+                    }
+                }
+
+                @media(min-width:768px){
+                    margin-top:-13vw;
+
+                    .image{
+                        $width: 15vw;
+                   
+                        width: $width;
+                        height: $width;  
+                    }
+                }
+
+                @media(min-width:1024px){
+                    margin-top:-11.5vw;
+
+                    .image{
+                        $width: 12vw;
+                   
+                        width: $width;
+                        height: $width;  
+                    }
+                }
+
+                @media(min-width:1100px){
+                    margin-top:-8vw;
+
+                    .image{
+                        $width: 10vw;
+                   
+                        width: $width;
+                        height: $width;  
+                    }
+                }
+
+                p{
+                    margin-top: 0;
+                    margin-bottom: 0.8rem;
+                }
+
+                .location{
+                    .fa{
+                        margin-right: 6px;
+                    }
+                }
+
+                .icons{
+                    font-size: 1.2rem;
+
+                    margin-top: 1rem;
+                    
+                    *{
+                        float: right;
+                        margin-left: 10px
+                    }
+
+                    &::after{
+                        content: '';
+                        display: block;
+                        clear: both;
+                    }  
+
+                }
+
+               
+
+            }            
+        }
+
+        .articles{
+            &>.title{
+                margin-bottom: 0.8rem;
+                margin-top: 2.5rem;
+            }
+
+            .item{
+                margin-bottom: 1em;
+            }
+        }
+        
+    }
+    
+}

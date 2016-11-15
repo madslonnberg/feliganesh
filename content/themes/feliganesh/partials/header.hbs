@@ -1,38 +1,37 @@
 <header>
 
-  <nav class="grid">
-   
-     <div class="show-for-768-up">
-       <div class="menu">
-         {{navigation}}
-       </div>
-      </div> 
+	<nav class="grid">
+
+		<div class="show-for-768-up ">
+      <div class="logo"><a href="/"><img src="{{asset 'images/feliganesh.png'}}" alt=""></a></div>  
+			<div class="menu">
+				<div className="navigation">
+					{{navigation}}
+				</div>
+			</div>
+		</div>
+
+		<div class="hide-for-768-up clear-float">
+			<div class="wrapper"></div>
+			<div class="logo"><a href="/"><img src="{{asset 'images/feliganesh.png'}}" alt=""></a></div>    
+			<div class="menu">
+				<div class="menu-header">
+					<p class="title" data-characters="9">{{title}}</p>
+					<div class="caret fa fa-caret-up "></div>
+				</div>
+				<div class="menu-options">
+					{{navigation}}
+				</div>
+			</div>
+		</div>
 
 
-    <div class="hide-for-768-up">
-        <div class="wrapper"></div> 
-        <!--<div class="ganesh grid"><img src="{{asset 'images/ganesh.png'}}" alt=""></div>    -->
-        <div class="menu">
-            <div class="menu-header">
-                <p class="title">{{title}}</p>
-                <div class="caret fa fa-caret-up "></div>
-            </div>
-            <div class="menu-options">
-                {{navigation}}
-            </div>     
 
 
-  
-        </div>
-    </div>
-
-  
-    
-
-  </nav>
+	</nav>
 
 
-  <script type="text/javascript">
+	<script type="text/javascript">
     $(document).ready(function() {
       var navHeight;
       var opened;

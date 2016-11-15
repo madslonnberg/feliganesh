@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  {{> head}}
+  <body id="blog" ng-app="masonryModule">
+    {{>blog-aside}}
+    <main id="author">
+        <div class="grid wrapper">
+
+            <header>
+                {{>blog-navigation}}
+            </header>
+            
+            <!--Author's card-->
+            {{>blog-author-card author=this.author}}
+  
+
+            <div class="articles">
+                <h1 class="title">Forfatterens artiklen</h1>
+                <div class="masonry">
+                    <div class="sizer"></div>
+                    <div class="gutter"></div>
+                    {{#get "posts" filter="author:{{author.slug}}+tags:[blog]" include="author"}}
+                        {{#foreach posts}}  
+                            {{> "loop" posts=posts words="20"}}
+                        {{/foreach}}
+                    {{/get}}
+                </div>
+            </div>  
+                
+        </div>
+    </main>
+  </body>
+</html>

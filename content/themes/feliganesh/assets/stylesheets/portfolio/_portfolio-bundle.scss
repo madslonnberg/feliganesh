@@ -130,10 +130,23 @@ body#portfolio{
 
         
 
-        .ganesh{
+        .logo{
             z-index: 3;
             position: relative;
-            width: 25%;
+            max-width: 15%;
+            float: left;
+            top: 5px;
+
+            @media(min-width:550px){
+                 max-width: 10%;
+                 top:12px;
+            }
+
+             @media(min-width:820px){
+                 max-width: 8%;
+                 top:15px;
+            }
+
         }
     }
 

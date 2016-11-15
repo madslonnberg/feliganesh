@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    {{> head}}
+
+    <body id="portfolio">
+
+        <div class="background">
+            <video ontimeupdate="onChange(event)" loop muted autoplay poster="{{asset "images/background-video-poster.png"}}">
+                <source src="{{asset "video/background-video.mp4"}}" type="video/mp4">
+            </video>
+        </div>
+        <div id="introduction" >
+            <div class="svg breath">
+               {{> portfolio-introduction/head}}
+               {{> portfolio-introduction/menu}}
+            </div>
+        </div>
+     
+        <script>
+            function onChange(event){
+                var video = event.target
+
+                if(video.currentTime > 13 ){
+                    video.currentTime = 0
+                }
+            }
+        </script>
+
+    </body>
+</html>

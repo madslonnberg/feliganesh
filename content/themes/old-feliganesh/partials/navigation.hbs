@@ -1,0 +1,9 @@
+<ul>
+  <!--Portfolio's navigation-->
+  {{#foreach navigation}}
+
+      <li {{#if current}}class="selected"{{/if}}>
+        <a href="{{url}}">{{label}}</a>
+      </li>
+  {{/foreach}}
+</ul>

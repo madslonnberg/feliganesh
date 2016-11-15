@@ -1,9 +1,18 @@
 <ul>
   <!--Portfolio's navigation-->
   {{#foreach navigation}}
-
       <li {{#if current}}class="selected"{{/if}}>
-        <a href="{{url}}">{{label}}</a>
+        <a href="{{url}}" >{{label}}</a>
       </li>
   {{/foreach}}
+  <li class="inspiration">
+    <a>inspiration</a>
+    <ul class="inspiration-sub-menu">
+      <li><a href="/one">one</a></li>
+      <li><a href="/two">two</a></li>
+      <li><a href="/three}">three</a></li>
+    </ul>
+  </li>
 </ul>
+
+ 

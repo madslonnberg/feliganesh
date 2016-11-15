@@ -72,6 +72,11 @@ body#blog .grid {
   body#blog .show-for-700-up {
     display: none; } }
 
+body#blog .clear-float ::after {
+  clear: both;
+  content: '';
+  display: block; }
+
 body#blog #post #disqus_thread {
   background: #f5f2ef;
   padding: 6%; }
@@ -668,6 +673,25 @@ body#portfolio .menu {
   body#portfolio .menu ul.grid {
     margin: 0;
     padding: 0; }
+  body#portfolio .menu li.inspiration {
+    position: relative; }
+    body#portfolio .menu li.inspiration ul.inspiration-sub-menu {
+      display: none; }
+      @media (min-width: 768px) {
+        body#portfolio .menu li.inspiration ul.inspiration-sub-menu {
+          opacity: 0;
+          position: absolute;
+          right: 0;
+          background: #fdfaf7;
+          width: 100%; }
+          body#portfolio .menu li.inspiration ul.inspiration-sub-menu li {
+            float: none;
+            border-bottom: 1px solid rgba(64, 37, 32, 0.1); } }
+      body#portfolio .menu li.inspiration ul.inspiration-sub-menu.show {
+        display: block; }
+        @media (min-width: 768px) {
+          body#portfolio .menu li.inspiration ul.inspiration-sub-menu.show {
+            opacity: 1; } }
 
 body#portfolio svg.head {
   width: 90%;
@@ -844,10 +868,20 @@ body#portfolio {
           body#portfolio header nav .menu ul li {
             float: right;
             padding-left: 0.8rem; } }
-  body#portfolio header .ganesh {
+  body#portfolio header .logo {
     z-index: 3;
     position: relative;
-    width: 25%; }
+    max-width: 15%;
+    float: left;
+    top: 5px; }
+    @media (min-width: 550px) {
+      body#portfolio header .logo {
+        max-width: 10%;
+        top: 12px; } }
+    @media (min-width: 820px) {
+      body#portfolio header .logo {
+        max-width: 8%;
+        top: 15px; } }
   body#portfolio main p {
     color: #2c2c30;
     margin-top: 0; }

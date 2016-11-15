@@ -69,7 +69,8 @@ body#portfolio{
     .menu {
         color: $letter;
         position: relative;
- 
+
+        
 
         li{
 
@@ -81,7 +82,6 @@ body#portfolio{
               color: $letter-menu-hover;
               font-weight: bold;      
             }
-
         }
 
 
@@ -155,11 +155,44 @@ body#portfolio{
                 }
             }
         
-        }
+        } 
         ul.grid {
             margin: 0;
             padding: 0;
         }
+
+        li.inspiration{
+            position: relative;
+            
+            ul.inspiration-sub-menu{
+                display: none;
+
+                @media(min-width: 768px){
+                    opacity: 0;  
+                    position: absolute; 
+                    right: 0;
+                    background: #fdfaf7;
+                    width: 100%;
+
+                    li{ 
+                        float: none;
+                        border-bottom: 1px solid rgba(64, 37, 32, 0.1);
+                    }
+                }
+
+                &.show{
+                    display: block;
+
+                    @media(min-width: 768px){
+                        opacity: 1;
+                    }
+                }
+            }
+        } 
+
+        
+       
+        
     }
 
 

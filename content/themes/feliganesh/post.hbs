@@ -107,11 +107,14 @@
         var selector = $("[data-characters]");
 
         selector.each(function(index, element){
-            var $element = $(element);  
-            var limit = Number($element.data('characters'))
-            var newText = $element.text().substring(0, limit) + '...' ;
+           var $element = $(element);  
+			var limit = Number($element.data('characters'))
+			var text = $element.text()			
 
-            $element.text(newText);
+			if(text.length > limit){
+				newText = text.substring(0, limit) + '...' ;
+				$element.text(newText);
+			}
         });
 
     }

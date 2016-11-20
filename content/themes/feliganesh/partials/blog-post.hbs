@@ -66,9 +66,15 @@
 
         var $element = $(element);  
         var limit = Number($element.data('characters'))
-        var newText = $element.text().substring(0, limit) + '...' ;
+        var text = $element.text()
 
-        $element.text(newText);
+        debugger
+
+        if(text.lenght > limit){
+          newText = text.substring(0, limit) + '...' ;
+          $element.text(text);
+        }
+
       });
 
     }

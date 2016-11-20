@@ -70,11 +70,32 @@
     })
 
     function activeListeners(){
+	
+		
+		if(window.innerWidth>768){
+
+			$('li.inspiration').hover(
+
+				function mouseIn(e){
+					$('.inspiration-sub-menu').addClass('show')
+				},
+
+				function mouseOut(e){
+					$('.inspiration-sub-menu').removeClass('show')
+				}
+
+			)
+
+		}
 
         // - inspiration link in the menu
-        $('li.inspiration>a').click(function(e){
-            $('.inspiration-sub-menu').toggleClass('show')
-        })
+        $('li.inspiration').click(function(e){
+
+			e.stopPropagation()
+        	
+			$('.inspiration-sub-menu').toggleClass('show')
+        
+		})
 
     }
 
